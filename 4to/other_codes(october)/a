@@ -1,0 +1,17 @@
+void productos(vector <string> &nombres, vector<float> &precios)
+{
+    float p_precio;
+    string p_nombre;
+    while(p_nombre != "/salir")
+    {
+        cout<<  "hola papulince,mete el nombre del puto producto"<<endl;
+        cin>>   p_nombre;
+        if (p_nombre != "/salir")
+        {
+            cout<<"Introducir precio"<<endl;
+            cin>>p_precio;
+            nombres.push_back(p_nombre);
+             precios.push_back(p_precio);
+        }
+    }
+}

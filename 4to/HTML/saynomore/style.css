@@ -1,0 +1,95 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.a {
+  position: fixed;
+  background-image: url('assets/Sin\ título.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; /* Altura completa de la ventana */
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.b
+{
+    background-color: 0xD1D1D1;
+    font-size: x-large;
+    font-family: cursive;
+}
+
+.formu
+{
+    display: block;
+    block-size: 30vh;
+    width: fit-content;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+    background-color: black;
+    text-shadow: white;
+    -webkit-text-fill-color: 0x1E1E1E;
+}
+.bg
+{
+    background-color: blueviolet;
+    border-radius: 20px;
+    -webkit-text-fill-color: azure;
+
+}
+.title
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+    text-shadow: 0, 10, 10, blue;
+}
+.snm {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 30vw;  /* 1/8 de la anchura de la pantalla (100vw / 8) */
+    height: 30vw; /* Mantener proporción cuadrada */
+    background-image: url('assets/say-no-more-charly-garcia-logo-png_seeklogo-501342.png');
+    background-size: contain;     /* Ajusta la imagen sin recortarla */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;                 /* Marca de agua transparente */
+    pointer-events: none;         /* Para que no interfiera con clicks */
+    z-index: 1000;                /* Encima de otros elementos */
+}
+
+.c
+{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 50vh;
+    width: 30vw;  /* 1/8 de la anchura de la pantalla (100vw / 8) */
+    height: 30vw; /* Mantener proporción cuadrada */
+    background-image: url('assets/images.jpeg');
+    background-size: contain;     /* Ajusta la imagen sin recortarla */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 100;                 /* Marca de agua transparente */
+    pointer-events: none;         /* Para que no interfiera con clicks */
+    z-index: 1000;                /* Encima de otros elementos */
+}
+.d
+{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 100vh;
+    width: 30vw;  /* 1/8 de la anchura de la pantalla (100vw / 8) */
+    height: 30vw; /* Mantener proporción cuadrada */
+    background-image: url('assets/wtf.jpeg');
+    background-size: contain;     /* Ajusta la imagen sin recortarla */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 100;                 /* Marca de agua transparente */
+    pointer-events: none;         /* Para que no interfiera con clicks */
+    z-index: 1000;                /* Encima de otros elementos */
+}

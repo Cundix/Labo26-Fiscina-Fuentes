@@ -1,0 +1,14 @@
+{
+  "name": "Focus Mode",
+  "description": "idk im just following the tutorial!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": "imgs/icon.png"
+  },
+
+  "background": {
+        "service_worker": "background.js"
+  },
+  "permissions":["activeTab", "scripting"] 
+}

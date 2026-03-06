@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- FISCINA Y FUENTES -->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabaña Los Arrayanes - Bariloche</title>
+    <link rel="icon" type="image/png" href="imagenes/trueLogo.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header con logo y navegación -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/trueLogo.jpg" alt="Logo Cabaña Los Arrayanes" class="logo-img">
+                <h2>Los Arrayanes</h2>
+            </div>
+            <nav>
+                <a href="#promociones">Promociones</a>
+                <a href="#comodidades">Comodidades</a>
+                <a href="#actividades">Actividades</a>
+                <a href="lugares.html">Lugares Turísticos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Título principal -->
+            <h1 class="main-title">Cabaña Los Arrayanes</h1>
+            <p class="subtitle">Tu refugio perfecto en el corazón de la Patagonia</p>
+
+            <!-- Galería de imágenes -->
+            <div class="image-gallery">
+                <img src="images/images.jpeg" alt="Vista exterior de la cabaña" class="gallery-img">
+                <img src="images/images2.jpeg" alt="Interior acogedor de la cabaña" class="gallery-img">
+            </div>
+
+            <!-- Descripción del lugar -->
+            <section class="description-section">
+                <h2>Una experiencia única en la naturaleza</h2>
+                <p>
+                    Nuestra <strong>hermosa cabaña</strong> está ubicada en un entorno <em>absolutamente mágico</em>, 
+                    rodeada de bosques de arrayanes y con una vista panorámica al lago Nahuel Huapi. 
+                    Es el lugar <strong>perfecto</strong> para desconectarte del estrés urbano y conectarte 
+                    con la <em>belleza natural</em> de la Patagonia argentina.
+                </p>
+                <p>
+                    Construida con <strong>materiales nobles</strong> como piedra y madera, la cabaña combina 
+                    el <em>encanto rústico</em> con todas las comodidades modernas. Cada rincón ha sido 
+                    diseñado pensando en tu <strong>máximo confort</strong> y en crear recuerdos 
+                    <em>inolvidables</em> junto a tus seres queridos.
+                </p>
+            </section>
+
+            <!-- Sección de promociones -->
+            <section id="promociones" class="promotions-section">
+                <h2>Promociones Especiales</h2>
+                <p>¡Aprovecha nuestras ofertas exclusivas! <a href="#tabla-precios" class="promo-link">Ver tabla de valores</a> y reserva tu estadía ideal.</p>
+                
+                <div class="contact-info">
+                    <p>Para más información y reservas:</p>
+                    <a href="mailto:info@tuestanciafeliz.com.ar" class="email-link">
+                        📧 info@tuestanciafeliz.com.ar
+                    </a>
+                </div>
+            </section>
+
+            <!-- Tabla de precios -->
+            <section id="tabla-precios" class="pricing-section">
+                <h2>Tabla de Valores</h2>
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>ENERO</th>
+                            <th>FEBRERO</th>
+                            <th>MARZO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>QUINCENA</strong></td>
+                            <td>$45,000</td>
+                            <td>$42,000</td>
+                            <td>$38,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MES</strong></td>
+                            <td>$85,000</td>
+                            <td>$78,000</td>
+                            <td>$70,000</td>
+                        </tr>
+                        <tr class="temporada-row">
+                            <td><strong>TEMPORADA</strong></td>
+                            <td colspan="3">$195,000 (3 meses completos)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Comodidades -->
+            <section id="comodidades" class="amenities-section">
+                <h2>Comodidades</h2>
+                <ul class="amenities-list">
+                    <li>Cocina completamente equipada con todos los electrodomésticos</li>
+                    <li>Chimenea a leña para las noches frías</li>
+                    <li>WiFi de alta velocidad en toda la cabaña</li>
+                    <li>Parrilla exterior con área de barbacoa</li>
+                    <li>Deck con vista al lago y mobiliario exterior</li>
+                    <li>Calefacción central por radiadores</li>
+                    <li>Baño completo con agua caliente las 24 horas</li>
+                </ul>
+            </section>
+
+            <!-- Actividades -->
+            <section id="actividades" class="activities-section">
+                <h2>Actividades Disponibles</h2>
+                <ol class="activities-list">
+                    <li>Senderismo por los senderos del bosque de arrayanes</li>
+                    <li>Pesca deportiva en el lago Nahuel Huapi</li>
+                    <li>Kayak y deportes acuáticos en el lago</li>
+                    <li>Observación de aves autóctonas de la región</li>
+                    <li>Fotografía de paisajes y vida silvestre</li>
+                    <li>Ciclismo por senderos naturales</li>
+                    <li>Noches de fogón bajo las estrellas</li>
+                </ol>
+            </section>
+
+            <!-- Enlaces -->
+            <section class="links-section">
+                <a href="lugares.html" class="explore-link">
+                    🗺️ Descubre los lugares turísticos de la zona
+                </a>
+            </section>
+        </div>
+        <div class="reserva-form-container">
+        <form class="reserva-form" action="#" method="post">
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="fecha">Fecha de ingreso:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="personas">Cantidad de personas:</label>
+            <input type="number" id="personas" name="personas" min="1" required>
+
+            <label for="cochera">
+            <input type="checkbox" id="cochera" name="cochera">
+            Necesito cochera
+            </label>
+
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe algún detalle adicional..."></textarea>
+
+            <div class="form-buttons">
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+            </div>
+        </form>
+        </div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Cabaña Los Arrayanes - Bariloche. Todos los derechos reservados.</p>
+            <p>Desarrollado con ❤️ para ofrecerte la mejor experiencia</p>
+        </div>
+    </footer>
+</body>
+</html>
