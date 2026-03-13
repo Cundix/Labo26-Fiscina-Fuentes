@@ -29,8 +29,27 @@ WHERE (
 		LIMIT 1
 		)>= 5;
 
-
+#11
 
 #13
-UPDATE 
+UPDATE Tournament t
+SET t.premio_en_usd = t.premio_en_usd * 2
+WHERE t.id in (SELECT tht.id_torneo as TORNEOID
+		FROM tournament_has_teams tht
+		GROUP BY tht.id_torneo
+		HAVING COUNT(tht.id_torneo) <3 );
+#14
+		
+UPDATE Games g
+SET g.Nombre = '[Popular]' + g.Nombre
+WHERE g.id in (SELECT tht.id_torneo as TORNEOID
+		FROM tournament_has_teams tht
+		GROUP BY tht.id_torneo
+		HAVING COUNT(tht.id_torneo) >2 );
+		
 #16
+DELETE FROM Players p
+WHERE p.id not in (SELECT pbt.player_id as IDEQUIPO
+		FROM Player_belongs_to_team pbt
+		GROUP BY pbt.player_id)	
+

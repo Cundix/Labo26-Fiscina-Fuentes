@@ -48,20 +48,18 @@ int main()
 
     char girada[N][N];
 
-    for(int i = 0; i < 4; i++)
-    {
-        girarDerecha(matriz, girada);
+    girarDerecha(matriz, girada);
 
-        cout << "Matriz original:\n\n";
-        mostrarMatriz(matriz);
+    cout << "Matriz original:\n\n";
+    mostrarMatriz(matriz);
 
-        cout << "\nPresionar Enter para girarla...";
-        cin.get();
+    cout << "\nPresionar Enter para girarla...";
+    cin.get();
 
-        limpiarPantalla();
+    limpiarPantalla();
 
-        cout << "Matriz girada 90 grados a la derecha:\n\n";
-        mostrarMatriz(girada);
-    }
+    cout << "Matriz girada 90 grados a la derecha:\n\n";
+    mostrarMatriz(girada);
+
     return 0;
 }

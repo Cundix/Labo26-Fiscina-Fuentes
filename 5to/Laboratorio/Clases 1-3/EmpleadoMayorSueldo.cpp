@@ -27,7 +27,8 @@ Empleado empleadoConMayorSueldo(vector<Empleado> empleados, vector <Empleado> & 
 
 int main(void)
 {
-    vector<Empleado> listaEmpleados = {
+    vector<Empleado> listaEmpleados = 
+    {
         {"Juan", "Pérez", "15/05/1990", "Masculino", 250500.50},
         {"María", "García", "22/08/1985", "Femenino", 480000.00},
         {"Carlos", "Rodríguez", "10/01/1993", "Masculino", 320000.75},
@@ -44,4 +45,4 @@ int main(void)
     {
         cout<<menor400[i].nombre<<" "<<menor400[i].apellido<<endl;
     }
-}
+}|
