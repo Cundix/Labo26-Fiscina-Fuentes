@@ -1,6 +1,6 @@
 package Unidad0;
 import java.lang.String;
-import java.util.Scanner
+import java.util.Scanner;
 
 public class ReemplazoLetra {
     public static void main(String[] args) {
@@ -12,12 +12,15 @@ public class ReemplazoLetra {
 
         char vocal = scanner.next().charAt(0);
 
+        String nuevoTexto;
         for (int i = 0; i < texto.length(); i++)
         {
             if (texto.charAt(i) == 'e')
             {
-                texto.charAt(i) = vocal;
+                nuevoTexto = nuevoTexto + vocal;
+
             }
+            
         }
 
         System.out.println(numeroVocales);
