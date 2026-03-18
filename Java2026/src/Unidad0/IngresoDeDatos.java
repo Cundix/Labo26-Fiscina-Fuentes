@@ -2,7 +2,7 @@ package Unidad0;
 
 import java.util.Scanner;
 
-public class IngresoDeDatos123 {
+public class IngresoDeDatos {
     public static void main(String[] args) {
         int N = 1;
         double A = 20;

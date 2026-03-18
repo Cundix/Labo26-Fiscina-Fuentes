@@ -1,26 +1,24 @@
 package Unidad0;
 import java.lang.String;
-import java.util.Locale;
-import java.util.Scanner
 
-public class EJ6 {
+public class Vocales {
     public static void main(String[] args) {
         String texto = "Ayer me compre muñecos de la marca ToyCo por internet";
         texto = texto.toLowerCase();
         String vocales ="aeiou";
         int numeroVocales = 0;
-        Scanner scanner = new Scanner(System.in);
-
-        char vocal = scanner.next().charAt(0);
-
         for (int i = 0; i < texto.length(); i++)
         {
-            if (texto.charAt(i) == 'e')
+            for (int x = 0; x < vocales.length(); x++)
             {
-                texto.charAt(i) = vocal;
+                if (texto.charAt(i) == vocales.charAt(x))
+                {
+                    numeroVocales++;
+                }
             }
+
         }
 
         System.out.println(numeroVocales);
     }
-}
+}  
