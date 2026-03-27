@@ -1,7 +1,3 @@
-package Unidad0;
-
-import java.util.Scanner;
-
 public class IngresoDeDatos {
     public static void main(String[] args) {
         int N = 1;

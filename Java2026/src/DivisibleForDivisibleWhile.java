@@ -1,5 +1,3 @@
-package Unidad0;
-
 public class DivisibleForDivisibleWhile {
     public static void main(String[] args) {
 

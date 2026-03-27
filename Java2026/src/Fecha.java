@@ -1,8 +1,4 @@
-package Unidad0;
-
-import java.util.Vector;
 import java.time.LocalDate;
-import java.time.DayOfWeek;
 import java.time.format.TextStyle; // Para nombres en español
 import java.util.Locale;
 
@@ -51,6 +47,18 @@ public class Fecha {
         String nombreDia = temp.getDayOfWeek().getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
         String nombreMes = temp.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
         System.out.println(nombreDia + " " + this.dia + " de " + nombreMes + " de " + this.anio);
+    }
+
+    public void siguienteDia(){
+        if (this.dia > diasXmes()) {
+            this.dia = 1;
+            this.mes++;
+
+            if (this.mes > 12) {
+                this.mes = 1;
+                this.anio++;
+            }
+        }
     }
 
     public static void main(String[] args) {

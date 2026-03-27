@@ -1,4 +1,3 @@
-package Unidad0;
 import java.lang.String;
 
 public class Vocales {

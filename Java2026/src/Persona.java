@@ -1,5 +1,3 @@
-package Unidad0;
-
 public class Persona {
     private String nombre;
     private int edad;
