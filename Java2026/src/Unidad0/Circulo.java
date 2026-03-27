@@ -28,4 +28,10 @@ public class Circulo
     {
         return (float)(this.radio * 2 * 3.14f);
     }
+
+    public static void main(String[] args) {
+        Circulo circulo = new Circulo(10);
+        System.out.println("Area: " + circulo.calcArea());
+        System.out.println("Perimetro: " + circulo.calcPer());
+    }
 }
