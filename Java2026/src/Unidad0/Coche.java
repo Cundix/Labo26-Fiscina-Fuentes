@@ -58,5 +58,11 @@ public class Coche {
         System.out.println("Velocidad actual: " + this.velocidad);
     }
 
+    public static void main(String[] args) {
+        Coche coche = new Coche();
+        System.out.println("Velocidad: " + coche.velocidad + "Marca: " + coche.marca + "Modelo: " + coche.modelo);
+        coche.XLR8();
+
+    }
 
 }

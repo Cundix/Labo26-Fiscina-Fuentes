@@ -16,7 +16,7 @@ public class Circulo
     {
         return this.radio;
     }
-    public float setRadio(float radio)
+    public void setRadio(float radio)
     {
         this.radio = radio;
     }

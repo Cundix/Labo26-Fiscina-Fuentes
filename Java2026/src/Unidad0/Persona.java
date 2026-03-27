@@ -11,4 +11,8 @@ public class Persona {
         System.out.println(this.edad);
         System.out.println(this.direccion);
     }
+
+    public static void main(String[] args) {
+
+    }
 }

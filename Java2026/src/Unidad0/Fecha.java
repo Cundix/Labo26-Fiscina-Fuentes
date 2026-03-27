@@ -1,6 +1,10 @@
 package Unidad0;
 
 import java.util.Vector;
+import java.time.LocalDate;
+import java.time.DayOfWeek;
+import java.time.format.TextStyle; // Para nombres en español
+import java.util.Locale;
 
 public class Fecha {
     private int dia;
@@ -42,8 +46,18 @@ public class Fecha {
     {
         System.out.println(this.dia + "-" + this.mes + "-" + this.anio);
     }
-    public void fechaLarga()
-    {
-        String[] dias = {}
+    public void fechaLarga() {
+        LocalDate temp = LocalDate.of(this.anio, this.mes, this.dia);
+        String nombreDia = temp.getDayOfWeek().getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
+        String nombreMes = temp.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
+        System.out.println(nombreDia + " " + this.dia + " de " + nombreMes + " de " + this.anio);
     }
+
+    public static void main(String[] args) {
+        Fecha fecha = new Fecha(20, 11, 2009);
+        System.out.println("Este mes tiene: " + fecha.diasXmes() + " Dias");
+        fecha.fechaLarga();
+        fecha.fechaCorta();
+    }
+
 }
