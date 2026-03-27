@@ -1,5 +1,7 @@
 package Unidad0;
 
+import java.util.Vector;
+
 public class Fecha {
     private int dia;
     private int mes;
@@ -16,18 +18,32 @@ public class Fecha {
     {
         if(dia <= 0 || dia > 31 || ((dia > 28) && (mes == 2)))
         {
-            System.out.println("El día ingresado no existe");
+            this.dia = 1;
         }
-        if (mes =< 0 || mes > 12) {
-            System.out.println("El mes ingresado no existe");
+        if (mes <= 0 || mes > 12) {
+            this.mes = 1;
         }
         if (anio > 9999) {
-            System.out.println("El año ingresado es muy grande");
+            this.anio = 1900;
         }
         else {
             this.dia = dia;
             this.mes = mes;
             this.anio = anio;
         }
+    }
+    public int diasXmes()
+    {
+        int[] dias = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        return dias[this.mes - 1];
+    }
+
+    public void fechaCorta()
+    {
+        System.out.println(this.dia + "-" + this.mes + "-" + this.anio);
+    }
+    public void fechaLarga()
+    {
+        String[] dias = {}
     }
 }
