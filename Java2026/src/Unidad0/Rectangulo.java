@@ -22,11 +22,16 @@ public class Rectangulo {
 
     public float calcArea()
     {
-        return (base*altura);
+        return (this.base*altura);
     }
 
     public float calcPerimeter()
     {
-        return ((base*2) + (altura*2));
+        return ((this.base*2) + (this.altura*2));
+    }
+    public static void main(String[] args) {
+        Rectangulo rectangulo = new Rectangulo(10, 7);
+        System.out.println("Area: " + rectangulo.calcArea());
+        System.out.println("Perimetro: " + rectangulo.calcPerimeter());
     }
 }
