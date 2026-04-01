@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.time.format.TextStyle; // Para nombres en español
 import java.util.Locale;
+import java.util.Scanner;
 
 public class Fecha {
     private int dia;
@@ -32,6 +33,13 @@ public class Fecha {
             this.anio = anio;
         }
     }
+    public Fecha (Fecha fecha)
+    {
+        this.dia = fecha.dia;
+        this.mes = fecha.mes;
+        this.anio = fecha.anio;
+
+    }
     public int diasXmes()
     {
         int[] dias = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
@@ -42,15 +50,15 @@ public class Fecha {
     {
         System.out.println(this.dia + "-" + this.mes + "-" + this.anio);
     }
-    public void fechaLarga() {
+    public String fechaLarga() {
         LocalDate temp = LocalDate.of(this.anio, this.mes, this.dia);
         String nombreDia = temp.getDayOfWeek().getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
         String nombreMes = temp.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
-        System.out.println(nombreDia + " " + this.dia + " de " + nombreMes + " de " + this.anio);
+        return (nombreDia + " " + this.dia + " de " + nombreMes + " de " + this.anio);
     }
 
-    public void siguienteDia(){
-        if (this.dia > diasXmes()) {
+    public Fecha siguienteDia(){
+        if (this.dia == diasXmes()) {
             this.dia = 1;
             this.mes++;
 
@@ -58,14 +66,89 @@ public class Fecha {
                 this.mes = 1;
                 this.anio++;
             }
+
         }
+        else
+        {
+            this.dia ++;
+        }
+        return this;
+    }
+
+    public Fecha anterior(){
+        if (this.dia == 1) {
+            this.dia = diasXmes();
+            this.mes --;
+
+            if (this.mes < 2) {
+                this.mes = 12;
+                this.anio --;
+            }
+
+        }
+        else
+        {
+            this.dia --;
+        }
+        return this;
+    }
+
+    public boolean igualQue(Fecha fecha2) {
+        return this.dia == fecha2.dia &&
+                this.mes == fecha2.mes &&
+                this.anio == fecha2.anio;
+    }
+    public boolean menorQue(Fecha fecha2)
+    {
+        boolean isItBeforier = false;
+        if(this.anio < fecha2.anio) isItBeforier = true;
+        else if(this.anio == fecha2.anio)
+        {
+            if(this.mes < fecha2.anio) isItBeforier = true;
+            else if(this.mes == fecha2.mes)
+            {
+                if(this.dia < fecha2.dia) isItBeforier = true;
+            }
+        }
+        return !isItBeforier;
+    }
+
+    public boolean mayorQue(Fecha fecha2)
+    {
+        boolean isItAfterier = false;
+        if(this.anio > fecha2.anio) isItAfterier = true;
+        else if(this.anio == fecha2.anio)
+        {
+            if(this.mes > fecha2.anio) isItAfterier = true;
+            else if(this.mes == fecha2.mes)
+            {
+                if(this.dia > fecha2.dia) isItAfterier = true;
+            }
+        }
+        return isItAfterier;
     }
 
     public static void main(String[] args) {
-        Fecha fecha = new Fecha(20, 11, 2009);
+        Fecha fecha = new Fecha(30, 12, 2009);
+        Fecha fechaOg = new Fecha(fecha);
+        Fecha fecha2 = new Fecha(31, 12, 2009);
         System.out.println("Este mes tiene: " + fecha.diasXmes() + " Dias");
-        fecha.fechaLarga();
+        System.out.println("Fecha 1: " + fecha.fechaLarga());
         fecha.fechaCorta();
+        System.out.println("Fecha 2: " + fecha2.fechaLarga());
+        fecha2.fechaCorta();
+
+        System.out.println("Siguiente dia: " + (fecha.siguienteDia()).fechaLarga());
+
+        System.out.println("Dia anterior: " + (fecha.anterior()).anterior().fechaLarga());
+
+        if(fechaOg.igualQue(fecha2)) System.out.println("Las fechas 1 y 2 son iguales");
+        else
+        {
+            if(fechaOg.menorQue(fecha2)) System.out.println("La fecha 2 es anterior a fecha 1");
+            else System.out.println("La fecha 1 es anterior a la fecha 2");
+        }
+
     }
 
 }
