@@ -10,7 +10,7 @@ public class Cohete {
 
     public Cohete()
     {
-        this.nombre = prueba;
+        this.nombre = "prueba";
         this.velocidadMax = 25001;
         this.largo = 100;
         this.ancho = 100;
@@ -23,6 +23,23 @@ public class Cohete {
         this.ancho = ancho;
         this.cPropulsores = cPropulsores;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+    public int getVelocidadMax() {
+        return velocidadMax;
+    }
+    public float getLargo() {
+        return largo;
+    }
+    public float getAncho() {
+        return ancho;
+    }
+    public int getCPropulsores() {
+        return cPropulsores;
+    }
+
     public void setNombre(String nombre)
     {
         this.nombre = nombre;
@@ -43,7 +60,7 @@ public class Cohete {
     {
         this.cPropulsores = cPropulsores;
     }
-    public boolean verificar
+    public boolean verificar()
     {
         boolean res = false;
         if(this.cPropulsores >= 2 && this.velocidadMax > 25000)
@@ -54,16 +71,20 @@ public class Cohete {
     }
     public void activar(int cant)
     {
-        if(cant <= cPropulsores && cant > 0) {
+        if(this.verificar()) {
+            if (cant <= cPropulsores && cant > 0) {
 
-            for (int i = 0; i < this.cPropulsores; i++) {
-                System.out.printf("Propulsor " + (i + 1) + " activado" + (i + 1) + "/" + this.cPropulsores);
+                for (int i = 0; i < this.cPropulsores; i++) {
+                    System.out.printf("Propulsor " + (i + 1) + " activado" + (i + 1) + "/" + this.cPropulsores);
+                }
+
+            } else {
+                System.out.printf("error. cantidad no valida");
             }
-
         }
         else
         {
-            System.out.printf("error. cantidad no valida");
+            System.out.printf("El cohete no es apto para activrar propulsores");
         }
     }
     public int calcularTiempo(int distancia)
@@ -76,7 +97,8 @@ public class Cohete {
         return res;
     }
 
-    
+
+
 
 
 }
