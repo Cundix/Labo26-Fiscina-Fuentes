@@ -62,7 +62,6 @@ public class Coche {
         coche.XLR8();
         System.out.println("Velocidad: " + coche.velocidad + " Marca: " + coche.marca + "Modelo: " + coche.modelo);
 
-
     }
 
 }
