@@ -25,7 +25,7 @@ public class Tecnico {
     }
     public void activarCoheteAsig()
     {
-        int cant = 2;
+        int cant = 3;
         coheteAsignado.activar(cant);
     }
     public boolean capacitado(Cohete cohete)
@@ -53,13 +53,14 @@ public class Tecnico {
         Cohete cohete1 = new Cohete("Cohete 1", 28000, 10, 80, 4);
         Cohete cohete2 = new Cohete("Cohete 2", 22000, 15, 60, 2);
         Cohete cohete3 = new Cohete("Cohete 3", 24000, 16, 50, 1);
-        Tecnico tecnico1 = new Tecnico(Roberto, Sanchez, new Fecha(11, 03, 2009), Propulsion, cohete1);
-        Tecnico tecnico2 = new Tecnico(Pedro, Sanchez, new Fecha(11, 03, 2009), Estructura, cohete2);
+        Tecnico tecnico1 = new Tecnico("Roberto", "Sanchez", new Fecha(11, 03, 2009), "Propulsion", cohete1);
+        Tecnico tecnico2 = new Tecnico("Pedro", "Sanchez", new Fecha(11, 03, 2009), "Estructura", cohete2);
 
         tecnico1.cambioCohete(cohete3);
         tecnico2.cambioCohete(cohete1);
 
-        //no esta terminado
+        tecnico1.activarCoheteAsig();
+        tecnico2.activarCoheteAsig();
 
     }
 

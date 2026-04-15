@@ -10,7 +10,22 @@ public class Persona {
         System.out.println(this.direccion);
     }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public Persona() {
+        this.edad = 30;
+        this.nombre = "Josh";
+        this.direccion = "Beiro 920, Vte. Lopez";
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
     public static void main(String[] args) {
 
     }
+
+
 }
