@@ -1,11 +1,8 @@
-import carreras.Corredor;
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.ArrayList;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class EjercicioArray {
     public static void main(String[] args) {
         ArrayList<Integer> numeritos = new ArrayList<>();
         numeritos.add(1);
