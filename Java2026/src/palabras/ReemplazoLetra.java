@@ -1,3 +1,5 @@
+package palabras;
+
 import java.util.Scanner;
 
 public class ReemplazoLetra

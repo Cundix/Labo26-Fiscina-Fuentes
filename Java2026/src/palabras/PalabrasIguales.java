@@ -1,4 +1,4 @@
-// Este codigo compara todos los caracteres, ahora me doy cuenta que se puede hacer mucho mas facil, pero bueno ya está hecho JAJAJJA.
+package palabras;// Este codigo compara todos los caracteres, ahora me doy cuenta que se puede hacer mucho mas facil, pero bueno ya está hecho JAJAJJA.
 
 import java.util.Scanner;
 

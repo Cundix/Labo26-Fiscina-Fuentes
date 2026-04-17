@@ -1,3 +1,5 @@
+package matematicas;
+
 public class IngresoDeDatos {
     public static void main(String[] args) {
         int N = 1;

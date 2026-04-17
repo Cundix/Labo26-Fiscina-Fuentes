@@ -1,3 +1,5 @@
+package fechas;
+
 import java.util.Scanner;
 public class DiaLaboral {
     public static void main(String[] args) {

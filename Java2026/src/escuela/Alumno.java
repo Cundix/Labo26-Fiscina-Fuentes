@@ -1,3 +1,5 @@
+package escuela;
+
 import java.util.ArrayList;
 
 public class Alumno {

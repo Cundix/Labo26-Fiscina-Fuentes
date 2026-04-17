@@ -1,7 +1,8 @@
+package fechas;
+
 import java.time.LocalDate;
 import java.time.format.TextStyle; // Para nombres en español
 import java.util.Locale;
-import java.util.Scanner;
 
 public class Fecha {
     private int dia;
@@ -133,9 +134,9 @@ public class Fecha {
         Fecha fechaOg = new Fecha(fecha);
         Fecha fecha2 = new Fecha(31, 12, 2009);
         System.out.println("Este mes tiene: " + fecha.diasXmes() + " Dias");
-        System.out.println("Fecha 1: " + fecha.fechaLarga());
+        System.out.println("fechas.Fecha 1: " + fecha.fechaLarga());
         fecha.fechaCorta();
-        System.out.println("Fecha 2: " + fecha2.fechaLarga());
+        System.out.println("fechas.Fecha 2: " + fecha2.fechaLarga());
         fecha2.fechaCorta();
 
         System.out.println("Siguiente dia: " + (fecha.siguienteDia()).fechaLarga());

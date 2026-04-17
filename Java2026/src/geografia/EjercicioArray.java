@@ -1,3 +1,7 @@
+package geografia;
+
+import personas.Persona;
+
 import java.util.ArrayList;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or

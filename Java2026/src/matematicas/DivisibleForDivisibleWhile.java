@@ -1,3 +1,5 @@
+package matematicas;
+
 public class DivisibleForDivisibleWhile {
     public static void main(String[] args) {
 

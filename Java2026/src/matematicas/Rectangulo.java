@@ -1,3 +1,5 @@
+package matematicas;
+
 public class Rectangulo {
     private float base;
     private float altura;

@@ -1,3 +1,5 @@
+package musica;
+
 public class Cancion {
     // Atributos privados para mantener el encapsulamiento
     private String titulo;

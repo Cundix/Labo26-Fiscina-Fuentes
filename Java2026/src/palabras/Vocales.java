@@ -1,3 +1,5 @@
+package palabras;
+
 import java.lang.String;
 
 public class Vocales {
