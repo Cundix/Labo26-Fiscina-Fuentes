@@ -28,7 +28,6 @@ public class Alumno {
         fechaNacimiento = new Fecha();
         listaNotas = new ArrayList<>();
         materias = new ArrayList<>();
-        listaNotas = Arrays.asList();
     }
 
     public void setFechaNacimiento(Fecha fechaNacimiento) {
@@ -114,12 +113,41 @@ public class Alumno {
         return promedio;
     }
 
-    public static void main(String[] args) {
-        Alumno a1 = new Alumno();
-        Alumno a2 = new Alumno();
+    public static void main(String[] args)
+    {
+        Alumno a1 = new Alumno("Lionel", "Messi", new Fecha(24, 6, 1987), new ArrayList<>(), new ArrayList<>());
 
+        System.out.println("--- ESTADÍSTICAS DEL ALUMNO ---");
+        a1.addNota(10.0f);
+        a1.addNota(8.5f);
+        a1.addNota(9.0f);
 
+        System.out.println("Alumno: " + a1.getNombre() + " " + a1.getApellido());
+        System.out.println("Lista de Notas: " + a1.getListaNotas());
+        System.out.println("Promedio: " + a1.promedioNotas());
+        a1.mayorNota();
+        a1.menorNota();
 
+        System.out.println("\n--- GESTIÓN DE MATERIAS ---");
+        Materias materia1 = new Materias();
+        materia1.setNombre("Programación II");
+        materia1.addContenido("Interfaces y Herencia");
+
+        System.out.println("\nMaterias que cursa " + a1.getNombre() + ":");
+        for (Materias m : a1.getMaterias()) {
+            System.out.println("- " + m.getNombre());
+        }
+
+        a1.agregarMaterias(materia1);
+        materia1.inscribirAlumno(a1);
+
+        System.out.println("\nMaterias que cursa " + a1.getNombre() + ":");
+        for (Materias m : a1.getMaterias()) {
+            System.out.println("- " + m.getNombre());
+        }
+
+        System.out.println("\nPromedio de edad en " + materia1.getNombre() + ":");
+        System.out.println(materia1.promedioEdadAlumnos() + " años");
     }
 
 
