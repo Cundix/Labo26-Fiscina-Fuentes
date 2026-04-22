@@ -1,5 +1,6 @@
 package objetos;
 
+import fechas.Fecha;
 import personas.Persona;
 
 public class Libro {

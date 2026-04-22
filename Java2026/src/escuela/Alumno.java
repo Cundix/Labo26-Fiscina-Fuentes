@@ -1,6 +1,8 @@
 package escuela;
 
+import fechas.Fecha;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Alumno {
     private String nombre;
@@ -11,6 +13,22 @@ public class Alumno {
 
     public Fecha getFechaNacimiento() {
         return fechaNacimiento;
+    }
+
+    public Alumno (String nombre, String apellido, Fecha fechaNacimiento, ArrayList<Float> listaNotas, ArrayList<Materias> materias) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaNacimiento = fechaNacimiento;
+        this.listaNotas = listaNotas;
+        this.materias = materias;
+    }
+    public Alumno() {
+        nombre = "";
+        apellido = "";
+        fechaNacimiento = new Fecha();
+        listaNotas = new ArrayList<>();
+        materias = new ArrayList<>();
+        listaNotas = Arrays.asList();
     }
 
     public void setFechaNacimiento(Fecha fechaNacimiento) {
@@ -40,6 +58,70 @@ public class Alumno {
     public void addNota(float nota){
         this.listaNotas.add(nota);
     }
+
+    public void mayorNota()
+    {
+        float valorInicial = 0;
+        for(Float nota: this.listaNotas)
+        {
+            if(nota > valorInicial)
+            {
+                valorInicial = nota;
+            }
+        }
+        System.out.println("Mayor Nota: " + valorInicial);
+    }
+    public void menorNota()
+    {
+        float valorInicial = 0;
+        for(Float nota: this.listaNotas)
+        {
+            if(nota < valorInicial)
+            {
+                valorInicial = nota;
+            }
+        }
+        System.out.println("Menor nota: " + valorInicial);
+    }
+
+    public ArrayList<Materias> getMaterias() {
+        return materias;
+    }
+
+    public void setMaterias(ArrayList<Materias> materias) {
+        this.materias = materias;
+    }
+
+    public void agregarMaterias(Materias materia)
+    {
+        this.materias.add(materia);
+    }
+
+    public void eliminarMaterias(Materias materia)
+    {
+        this.materias.remove(materia);
+    }
+
+    public float promedioNotas()
+    {
+        float promedio = 0;
+        for(Float nota: this.listaNotas)
+        {
+            promedio += nota;
+        }
+
+        promedio = promedio/this.listaNotas.size();
+        return promedio;
+    }
+
+    public static void main(String[] args) {
+        Alumno a1 = new Alumno();
+        Alumno a2 = new Alumno();
+
+
+
+    }
+
 
 
 }
