@@ -47,4 +47,10 @@ public class Partido {
     public void setFechaPartido(Fecha fechaPartido) {
         this.fechaPartido = fechaPartido;
     }
+
+    public String toString() {
+        return "Partido: " + equipo1.getNombre() + " vs " + equipo2.getNombre() +
+                " | Fecha: " + fechaPartido.getDia() + "/" + fechaPartido.getMes() +
+                " | Turno: " + turno;
+    }
 }

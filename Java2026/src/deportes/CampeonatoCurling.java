@@ -1,5 +1,5 @@
 package deportes;
-
+import fechas.Fecha;
 import java.util.ArrayList;
 
 public class CampeonatoCurling {
@@ -7,6 +7,13 @@ public class CampeonatoCurling {
     private float premioEnUSD;
     private ArrayList<Partido> partidos;
     private ArrayList<Equipo> equipos;
+
+    public CampeonatoCurling(String nombre, float premioEnUSD) {
+        this.nombre = nombre;
+        this.premioEnUSD = premioEnUSD;
+        this.partidos = new ArrayList<>();
+        this.equipos = new ArrayList<>();
+    }
 
     public String getNombre() {
         return nombre;
@@ -28,73 +35,55 @@ public class CampeonatoCurling {
         return partidos;
     }
 
-    public void setPartidos(ArrayList<Partido> partidos) {
-        this.partidos = partidos;
-    }
-
     public ArrayList<Equipo> getEquipos() {
         return equipos;
     }
 
-    public void setEquipos(ArrayList<Equipo> equipos) {
-        this.equipos = equipos;
-    }
-
-    public CampeonatoCurling(String nombre, float premioEnUSD, ArrayList<Partido> partidos, ArrayList<Equipo> equipos) {
-        this.nombre = nombre;
-        this.premioEnUSD = premioEnUSD;
-        this.partidos = partidos;
-        this.equipos = equipos;
-    }
-
-    public void agrregarEquipo(Equipo equipo)
-    {
-        if(isTeamValid(equipo))
-        {
+    public void agregarEquipo(Equipo equipo) {
+        if (isTeamValid(equipo)) {
             this.equipos.add(equipo);
         }
-
     }
 
-    public boolean isTeamValid(Equipo equipo)
-    {
-        if((equipo.getCantidadJugadores() == 11) && equipo.checkCamisetas() && !equipo.getTurnos().isEmpty())
-        {
-            return true;
-        }
+    public boolean isTeamValid(Equipo equipo) {
+        return equipo.getCantidadJugadores() == 11 &&
+                equipo.tieneUnSoloCapitan() &&
+                equipo.checkCamisetas() &&
+                !equipo.getTurnos().isEmpty();
     }
 
-    public void emparejar()
-    {
-        int cant = 0;
-        while(this.equipos.size()>0)
-        {
+    public void generarFixture() {
+        int contadorDia = 1;
+        for (int i = 0; i < equipos.size(); i++) {
+            for (int j = i + 1; j < equipos.size(); j++) {
+                Equipo e1 = equipos.get(i);
+                Equipo e2 = equipos.get(j);
+                String turno = obtenerTurnoComun(e1, e2);
 
-            Partido partido = new Partido();
-            if(this.equipos.get())
-        }
-    }
-    public Partido nuevoPartido(Equipo equipo1, Equipo equipo2)
-    {
-
-    }
-
-    public int checkHorarios(Equipo equipo1, Equipo equipo2)
-    {
-        if(equipo1.getTurnos().size() > equipo2.getTurnos().size())
-        {
-            for (int i = 0; i < equipo1.getTurnos().size(); i++)
-            {
-                if (equipo2.getTurnos().contains(equipo1.getTurnos().get(i)))
-            }
-        }
-        else
-        {
-            for (int i = 0; i < equipo2.getTurnos().size(); i++)
-            {
-                if (equipo1.getTurnos().contains(equipo2.getTurnos().get(i)))
+                if (turno != null) {
+                    Fecha fechaPartido = new Fecha(contadorDia, 1, 2024);
+                    this.partidos.add(new Partido(e1, e2, turno, fechaPartido));
+                    contadorDia++;
+                } else {
+                    System.out.println("No se pudo programar: " + e1.getNombre() + " vs " + e2.getNombre());
+                }
             }
         }
     }
 
+    private String obtenerTurnoComun(Equipo e1, Equipo e2) {
+        String[] prioridades = {"mañana", "tarde", "noche"};
+        for (String p : prioridades) {
+            for (String t1 : e1.getTurnos()) {
+                if (t1.equalsIgnoreCase(p)) {
+                    for (String t2 : e2.getTurnos()) {
+                        if (t2.equalsIgnoreCase(p)) {
+                            return p;
+                        }
+                    }
+                }
+            }
+        }
+        return null;
+    }
 }
