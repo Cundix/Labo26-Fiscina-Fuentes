@@ -13,7 +13,7 @@ public class mainCurling {
         for (int i = 1; i <= 11; i++) {
             Jugador j = new Jugador("Nombre" + i, "Apellido" + i, new Fecha(1, 1, 1990), i);
             e1.addJugador(j);
-            if (i == 1) e1.setCapitan(j); // El primero es capitan
+            if (i == 1) e1.setCapitan(j); // El primero es capitán
         }
         e1.addTurno("mañana");
         e1.addTurno("tarde");
