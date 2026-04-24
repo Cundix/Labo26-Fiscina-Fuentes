@@ -1,9 +1,8 @@
-package Deportes;
+package deportes;
 
 import java.util.ArrayList;
-import java.util.Queue;
 
-public class campeonatoCurling {
+public class CampeonatoCurling {
     private String nombre;
     private float premioEnUSD;
     private ArrayList<Partido> partidos;
@@ -41,7 +40,7 @@ public class campeonatoCurling {
         this.equipos = equipos;
     }
 
-    public campeonatoCurling(String nombre, float premioEnUSD, ArrayList<Partido> partidos, ArrayList<Equipo> equipos) {
+    public CampeonatoCurling(String nombre, float premioEnUSD, ArrayList<Partido> partidos, ArrayList<Equipo> equipos) {
         this.nombre = nombre;
         this.premioEnUSD = premioEnUSD;
         this.partidos = partidos;

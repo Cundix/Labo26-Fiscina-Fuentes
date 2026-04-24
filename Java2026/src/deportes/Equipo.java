@@ -1,4 +1,4 @@
-package Deportes;
+package deportes;
 
 import personas.Jugador;
 
