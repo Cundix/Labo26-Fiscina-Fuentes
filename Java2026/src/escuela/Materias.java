@@ -1,11 +1,12 @@
 package escuela;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Period;
 import java.util.ArrayList;
-import java.util.Date;
+
 import fechas.Fecha;
+import personas.Alumno;
+
 public class Materias
 {
     private String nombre;
@@ -87,8 +88,8 @@ public class Materias
 
     public static void main(String[] args)
     {
-        Alumno al1 = new Alumno("Julian", "Alvarez", new Fecha(31, 1, 2000), new ArrayList<>(), new ArrayList<>());
-        Alumno al2 = new Alumno("Enzo", "Fernandez", new Fecha(17, 1, 2001), new ArrayList<>(), new ArrayList<>());
+        Alumno al1 = new Alumno("Julian", "Alvarez", 44,  new Fecha(31, 1, 2000), "", new ArrayList<>(), new ArrayList<>());
+        Alumno al2 = new Alumno("Enzo", "Fernandez", 45, new Fecha(17, 1, 2001), "", new ArrayList<>(), new ArrayList<>());
 
         Materias programacion = new Materias("Programacion II", new ArrayList<>(), new ArrayList<>());
 

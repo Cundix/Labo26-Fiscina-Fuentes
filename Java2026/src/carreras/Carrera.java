@@ -1,6 +1,8 @@
 package carreras;
 
 
+import personas.Corredor;
+
 import java.util.ArrayList;
 
 public class Carrera {
@@ -29,7 +31,7 @@ public class Carrera {
         {
             Corredor corredor = new Corredor();
             corredors.add(corredor);
-            System.out.println("EL corredor n°" +i +" para " + carrera.getName() + " es: " + corredor.getName());
+            System.out.println("EL corredor n°" +i +" para " + carrera.getName() + " es: " + corredor.getNombre());
         }
 
 

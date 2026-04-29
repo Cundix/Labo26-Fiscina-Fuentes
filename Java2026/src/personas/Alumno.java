@@ -1,52 +1,27 @@
-package escuela;
+package personas;
 
+import escuela.Materias;
 import fechas.Fecha;
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class Alumno {
-    private String nombre;
-    private  String apellido;
-    private Fecha fechaNacimiento;
+public class Alumno extends Persona {
+
     private ArrayList<Float> listaNotas;
     private ArrayList<Materias> materias;
 
-    public Fecha getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public Alumno (String nombre, String apellido, Fecha fechaNacimiento, ArrayList<Float> listaNotas, ArrayList<Materias> materias) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.fechaNacimiento = fechaNacimiento;
+    public Alumno (String nombre, String apellido, int edad, Fecha fechaNacimiento, String direccion, ArrayList<Float> listaNotas, ArrayList<Materias> materias)
+    {
+        super(nombre, apellido, edad, fechaNacimiento, direccion);
         this.listaNotas = listaNotas;
         this.materias = materias;
     }
-    public Alumno() {
-        nombre = "";
-        apellido = "";
-        fechaNacimiento = new Fecha();
+    public Alumno(ArrayList<Float> listaNotas, ArrayList<Materias> materias) {
+
         listaNotas = new ArrayList<>();
         materias = new ArrayList<>();
     }
 
-    public void setFechaNacimiento(Fecha fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
 
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
     public ArrayList<Float> getListaNotas() {
         return listaNotas;
     }
@@ -115,7 +90,7 @@ public class Alumno {
 
     public static void main(String[] args)
     {
-        Alumno a1 = new Alumno("Lionel", "Messi", new Fecha(24, 6, 1987), new ArrayList<>(), new ArrayList<>());
+        Alumno a1 = new Alumno("Lionel", "Messi", 38,  new Fecha(24, 6, 1987), "", new ArrayList<>(), new ArrayList<>());
 
         System.out.println("--- ESTADÍSTICAS DEL ALUMNO ---");
         a1.addNota(10.0f);

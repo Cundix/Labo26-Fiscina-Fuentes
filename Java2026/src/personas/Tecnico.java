@@ -1,21 +1,23 @@
 package personas;
 
 import fechas.Fecha;
+
 import objetos.Cohete;
 
-public class Tecnico {
+public class Tecnico extends Persona {
 
-    private String nombre;
-    private String apellido;
-    private Fecha nacimiento;
     private String especialidad;
     private Cohete coheteAsignado;
 
-    public Tecnico(String nombre, String apellido, Fecha fecha, String especialidad, Cohete cohete)
+    public Tecnico(String nombre, String apellido, int edad, Fecha fechaNacimiento, String direccion, String especialidad, Cohete cohete)
     {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.nacimiento = fecha;
+        super(nombre, apellido, edad, fechaNacimiento, direccion);
+        this.especialidad = especialidad;
+        this.coheteAsignado = cohete;
+    }
+    public Tecnico(String especialidad, Cohete cohete)
+    {
+        super();
         this.especialidad = especialidad;
         this.coheteAsignado = cohete;
     }
@@ -55,11 +57,13 @@ public class Tecnico {
     }
 
     public static void main(String[] args) {
-        Cohete cohete1 = new Cohete("objetos.Cohete 1", 28000, 10, 80, 4);
-        Cohete cohete2 = new Cohete("objetos.Cohete 2", 22000, 15, 60, 2);
-        Cohete cohete3 = new Cohete("objetos.Cohete 3", 24000, 16, 50, 1);
-        Tecnico tecnico1 = new Tecnico("Roberto", "Sanchez", new Fecha(11, 03, 2009), "Propulsion", cohete1);
-        Tecnico tecnico2 = new Tecnico("Pedro", "Sanchez", new Fecha(11, 03, 2009), "Estructura", cohete2);
+
+        Cohete cohete1 = new Cohete();
+        Cohete cohete2 = new Cohete();
+        Cohete cohete3 = new Cohete();
+        Tecnico tecnico1 = new Tecnico("Navegacion", cohete1);
+        Tecnico tecnico2 = new Tecnico("Propulsion", cohete1);
+        Tecnico tecnico3 = new Tecnico("Estructura", cohete1);
 
         tecnico1.cambioCohete(cohete3);
         tecnico2.cambioCohete(cohete1);

@@ -1,7 +1,8 @@
 package fechas;
 
 import java.util.Scanner;
-public class DiaLaboral {
+public class DiaLaboral
+{
     public static void main(String[] args) {
         String dia;
         System.out.println("Ingresar Día:");
