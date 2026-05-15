@@ -161,4 +161,25 @@ public class SistemaBuffet {
             System.out.println(i + ". " + menu.get(i).getNombre() + " - $" + menu.get(i).getPrecio());
         }
     }
+
+    public void registrarPedido(Pedido nuevoPedido) {
+        if (nuevoPedido != null) {
+            listaPedidos.add(nuevoPedido);
+
+            nuevoPedido.getPlato().incrementarContador();
+
+            System.out.println("SISTEMA: Pedido registrado y contabilizado.");
+        }
+    }
+    public void mostrarTop3() {
+        ArrayList<Plato> copiaMenu = new ArrayList<>(menu);
+
+        copiaMenu.sort((p1, p2) -> Integer.compare(p2.getCantidadPedidos(), p1.getCantidadPedidos()));
+
+        System.out.println("\n--- TOP 3 PLATOS MÁS VENDIDOS ---");
+        for (int i = 0; i < Math.min(3, copiaMenu.size()); i++) {
+            Plato p = copiaMenu.get(i);
+            System.out.println((i + 1) + "º " + p.getNombre() + " - Pedidos: " + p.getCantidadPedidos());
+        }
+    }
 }

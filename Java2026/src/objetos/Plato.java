@@ -3,6 +3,7 @@ package objetos;
 public class Plato {
     private String nombre;
     private double precio;
+    private int cantidadPedidos;
 
     public Plato(String nombre, double precio) {
         this.nombre = nombre;
@@ -23,6 +24,14 @@ public class Plato {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    public void incrementarContador() {
+        this.cantidadPedidos++;
+    }
+
+    public int getCantidadPedidos() {
+        return cantidadPedidos;
     }
 }
 
