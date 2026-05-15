@@ -1,5 +1,6 @@
 package personas;
 
+import empresarial.SistemaBuffet;
 import fechas.Fecha;
 import fechas.Hora;
 import objetos.Pedido;
@@ -25,8 +26,7 @@ public class PersonaEducativa extends Persona{
 
     public void setPorcentajeDto(int porcentajeDto) {}
 
-    public void hacerPedido(Plato plato, Hora hora)
-    {
-        Pedido p = new Pedido(plato, this, hora);
+    public Pedido hacerPedido(Plato plato, Hora hora, Fecha fechaActual) {
+        return new Pedido(fechaActual, plato, this, hora, false);
     }
 }
