@@ -4,10 +4,23 @@ import escuela.Materias;
 import fechas.Fecha;
 import java.util.ArrayList;
 
-public class Alumno extends Persona {
+public class Alumno extends PersonaEducativa {
+
+    private String division;
 
     private ArrayList<Float> listaNotas;
     private ArrayList<Materias> materias;
+    private int porcentajeDto = 0;
+
+    public Alumno(String division)
+    {
+        super();
+        this.division = division;
+
+    }
+
+
+    public String getDivision() {return division;}
 
     public Alumno (String nombre, String apellido, int edad, Fecha fechaNacimiento, String direccion, ArrayList<Float> listaNotas, ArrayList<Materias> materias)
     {
@@ -15,6 +28,11 @@ public class Alumno extends Persona {
         this.listaNotas = listaNotas;
         this.materias = materias;
     }
+
+    public int getPorcentajeDto() {
+        return porcentajeDto;
+    }
+
     public Alumno(ArrayList<Float> listaNotas, ArrayList<Materias> materias) {
 
         listaNotas = new ArrayList<>();

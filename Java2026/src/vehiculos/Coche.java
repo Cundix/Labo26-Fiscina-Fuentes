@@ -1,10 +1,15 @@
-package objetos;
+package vehiculos;
+
+import fechas.Fecha;
 
 public class Coche {
     private String marca;
     private String modelo;
     private String color;
     private int velocidad;
+    private float cargaMaxEnKGs;
+    private boolean descapotable;
+
 
     public Coche(String marca, String modelo, String color, int velocidad)
     {

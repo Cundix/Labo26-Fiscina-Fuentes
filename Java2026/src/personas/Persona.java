@@ -17,6 +17,12 @@ public class Persona {
         this.direccion = direccion;
     }
 
+    public Persona(String nombre, String apellido)
+    {
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
     public void showData()
     {
         System.out.println("Nombre: " + nombre);
