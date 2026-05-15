@@ -67,11 +67,11 @@ public class Pedido
         this.entregado = entregado;
     }
 
-    public void Pedido(Plato plato, Hora hora, Persona persona)
-    {
+    public Pedido(Plato plato, Persona persona, Hora hora) {
         this.plato = plato;
-        this.hora = hora;
         this.persona = persona;
+        this.hora = hora;
+        this.fechaCreacion = new Fecha();
         this.entregado = false;
     }
 }

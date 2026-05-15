@@ -54,8 +54,7 @@ public class SistemaBuffet {
             System.out.println("2. Modificar Plato");
             System.out.println("3. Eliminar Plato");
             System.out.println("4. Ver Menú");
-            System.out.println("5. Crear Nuevo Pedido");
-            System.out.println("6. Ver Lista de Pedidos");
+            System.out.println("5. Ver Lista de Pedidos");
             System.out.println("0. Salir");
             System.out.print("Opción: ");
             opcion = sc.nextInt();
@@ -102,31 +101,6 @@ public class SistemaBuffet {
                     break;
 
                 case 5:
-                    if (sistemaBuffet.menu.isEmpty()) {
-                        System.out.println("No hay platos en el menú. Agrega uno primero.");
-                        break;
-                    }
-                    verMenu(sistemaBuffet.menu);
-                    System.out.print("Seleccione el número de plato: ");
-                    int idxPlato = sc.nextInt();
-                    sc.nextLine();
-
-                    if (idxPlato >= 0 && idxPlato < sistemaBuffet.menu.size()) {
-                        System.out.print("Nombre del cliente: ");
-                        String cliente = sc.nextLine();
-
-                        Fecha hoy = new Fecha(); // Ejemplo
-                        Hora ahora = new Hora();   // Ejemplo
-                        Persona p = new Persona();
-                        Plato seleccionado = sistemaBuffet.menu.get(idxPlato);
-
-                        Pedido nuevoPedido = new Pedido(hoy, seleccionado, p, ahora, false);
-                        sistemaBuffet.listaPedidos.add(nuevoPedido);
-                        System.out.println("Pedido creado con éxito.");
-                    }
-                    break;
-
-                case 6:
                     System.out.println("\n--- LISTA DE PEDIDOS ---");
                     if (sistemaBuffet.listaPedidos.isEmpty()) {
                         System.out.println("No hay pedidos registrados.");

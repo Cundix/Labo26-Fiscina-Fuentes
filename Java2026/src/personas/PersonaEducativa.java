@@ -25,8 +25,8 @@ public class PersonaEducativa extends Persona{
 
     public void setPorcentajeDto(int porcentajeDto) {}
 
-    public void hacerPedido(Plato plato, Hora hora, Persona persona)
+    public void hacerPedido(Plato plato, Hora hora)
     {
-        Pedido p = new Pedido();
+        Pedido p = new Pedido(plato, this, hora);
     }
 }
