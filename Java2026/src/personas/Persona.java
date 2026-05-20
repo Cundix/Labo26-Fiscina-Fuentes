@@ -3,11 +3,14 @@ package personas;
 import fechas.Fecha;
 
 public class Persona {
+    private int dni;
     private String nombre;
     private String apellido;
     private int edad;
     private Fecha fechaNacimiento;
     private String direccion;
+    private String pais;
+    private String provincia;
 
     public Persona(String nombre, String apellido, int edad, Fecha fechaNacimiento, String direccion) {
         this.nombre = nombre;
@@ -17,10 +20,50 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public Persona(String nombre, String apellido)
+    public Persona(String nombre, String apellido, int dni, String pais, String provincia)
     {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.dni = dni;
+        this.pais = pais;
+        this.provincia = provincia;
+    }
+
+    public Persona(String pais, String provincia)
+    {
+        this.pais = pais;
+        this.provincia = provincia;
+        nombre = "Empleado";
+        apellido = "x";
+    }
+
+    public String getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
+    }
+
+    public int getDni() {
+        return dni;
+    }
+    public void setDni(int dni) {
+        this.dni = dni;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public Persona(String nombre, String apellido, int edad)
+    {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
     }
 
     public void showData()
