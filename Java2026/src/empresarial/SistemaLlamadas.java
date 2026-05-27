@@ -51,6 +51,11 @@ public class SistemaLlamadas
         return lista;
     }
 
+    public ArrayList<Empleado> ranking ()
+    {
+        
+    }
+
 
 
     public ArrayList<Llamada> getRegistroLlamadas()
