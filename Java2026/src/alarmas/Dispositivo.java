@@ -51,10 +51,16 @@ public class Dispositivo {
         this.umbral = 1;
     }
 
-    public boolean activarSensor()
+    public void mensaje()
+    {
+        System.out.println("Dispositivo ACTIVADO!");
+    }
+
+    public boolean alarma()
     {
         if(this.getMedicion() > this.getUmbral())
         {
+            this.mensaje();
             return true;
         }
 

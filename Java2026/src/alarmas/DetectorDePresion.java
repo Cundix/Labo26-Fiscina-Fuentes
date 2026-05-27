@@ -10,4 +10,9 @@ public class DetectorDePresion extends Dispositivo {
     public DetectorDePresion() {
         super();
     }
+
+    @Override
+    public void mensaje() {
+        System.out.println("Presion alta!");
+    }
 }

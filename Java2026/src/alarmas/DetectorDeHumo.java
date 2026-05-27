@@ -10,4 +10,9 @@ public class DetectorDeHumo extends Dispositivo{
     public DetectorDeHumo() {
         super();
     }
+
+    @Override
+    public void mensaje() {
+        System.out.println("Llamando a los bomberos!");
+    }
 }

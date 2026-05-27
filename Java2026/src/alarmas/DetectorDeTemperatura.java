@@ -11,4 +11,8 @@ public class DetectorDeTemperatura extends Dispositivo{
         super();
     }
 
+    @Override
+    public void mensaje() {
+        System.out.println("Temperatura alta!");
+    }
 }
