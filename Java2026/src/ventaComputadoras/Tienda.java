@@ -35,7 +35,6 @@ public class Tienda {
             return null;
         }
 
-        // 1. Agrupamos TODOS los componentes vendidos (CPUs y periféricos) en una sola lista
         ArrayList<Componente> todosLosComponentes = new ArrayList<>();
 
         for (Compra c : comprasVendidas) {
@@ -45,7 +44,6 @@ public class Tienda {
             }
         }
 
-        // 2. Buscamos cuál se repite más usando dos ciclos 'for'
         Componente masVendido = null;
         int maxVentas = 0;
 
@@ -53,14 +51,12 @@ public class Tienda {
             Componente actual = todosLosComponentes.get(i);
             int contadorVentas = 0;
 
-            // Comparamos el componente actual con todos los demás de la lista
             for (int j = 0; j < todosLosComponentes.size(); j++) {
                 if (todosLosComponentes.get(j) == actual) {
                     contadorVentas++;
                 }
             }
 
-            // Si este componente se vendió más veces que el máximo anterior, lo guardamos
             if (contadorVentas > maxVentas) {
                 maxVentas = contadorVentas;
                 masVendido = actual;
