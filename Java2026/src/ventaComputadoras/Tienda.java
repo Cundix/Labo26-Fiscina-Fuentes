@@ -8,6 +8,7 @@ public class Tienda {
 
     public void registrarCompra(Cliente cliente, Computadora computadora, MetodoDePago pago) {
         if (!computadora.esValida()) {
+            System.out.println("Computadora no valida!");
             return;
         }
 
@@ -22,12 +23,14 @@ public class Tienda {
         }
 
         computadora.getCpu().descontarStock(1);
+
         for (Componente p : computadora.getPerifericos()) {
             p.descontarStock(1);
         }
 
         Compra nuevaCompra = new Compra(cliente, computadora, pago);
         comprasVendidas.add(nuevaCompra);
+        System.out.println("Compra registrada com sucesso!");
     }
 
     public Componente calcularComponenteMasVendido() {
@@ -65,4 +68,15 @@ public class Tienda {
 
         return masVendido;
     }
+
+    public static void main(String[] args) {
+
+        Tienda miTienda = new Tienda();
+        miTienda.registrarCompra(new Cliente("Facundo", "Fiscina", "11-7366-9228"), new Computadora(new CPU()), new Tarjeta("", "", ""));
+        for (Compra compra : miTienda.comprasVendidas)
+        {
+            compra.mostrarDetalle();
+        }
+    }
+
 }

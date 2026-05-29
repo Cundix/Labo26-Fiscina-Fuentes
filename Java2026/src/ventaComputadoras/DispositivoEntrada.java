@@ -1,6 +1,6 @@
 package ventaComputadoras;
 
-public class DispositivoEntrada extends Componente{
+public class DispositivoEntrada extends Componente{ //Segun el profe, deberia extender de periferico, igual con disp salida
     private String tipoDeConector;
     private int cantPuertosValidos;
 
@@ -21,6 +21,9 @@ public class DispositivoEntrada extends Componente{
     }
 
     public DispositivoEntrada() {
+        super();
+        this.tipoDeConector = "Dispositivo";
+        this.cantPuertosValidos = 2;
     }
 
     public DispositivoEntrada(String fabricante, String modelo, int stock, float precio, String tipoDeConector, int cantPuertosValidos) {

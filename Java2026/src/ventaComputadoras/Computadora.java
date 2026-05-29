@@ -6,6 +6,27 @@ public class Computadora {
     private CPU cpu;
     private ArrayList<Componente> perifericos = new ArrayList<>();
 
+    public Computadora(CPU cpu, ArrayList<Componente> perifericos) {
+        this.cpu = cpu;
+        this.perifericos = perifericos;
+    }
+
+    public Computadora(CPU cpu) {
+        this.cpu = cpu;
+        ArrayList<Componente> perifericos = new ArrayList<>();
+        perifericos.add(new DispositivoEntrada());
+        perifericos.add(new DispositivoSalida());
+        this.perifericos = perifericos;
+    }
+
+    public Computadora()
+    {
+        this.cpu = new CPU();
+        this.perifericos = new ArrayList<>();
+        this.perifericos.add(new Componente());
+        this.perifericos.add(new Componente());
+    }
+
     public CPU getCpu() {
         return cpu;
     }
@@ -37,7 +58,7 @@ public class Computadora {
         boolean tieneSalida = false;
 
         for (Componente p : perifericos) {
-            if (p instanceof DispositivoEntrada) tieneEntrada = true;
+            if (p instanceof DispositivoEntrada) tieneEntrada = true; //En lugar de hacer instanceof, hay que hacer un metodo en la clase no hecha "perifericos" que overridee un metodo que devuelva cant de puertos i y o.
             if (p instanceof DispositivoSalida) tieneSalida = true;
         }
         return tieneEntrada && tieneSalida;

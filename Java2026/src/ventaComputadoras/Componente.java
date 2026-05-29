@@ -45,6 +45,13 @@ public class Componente {
         this.stock = 1;
         this.precio = 1;
     }
+    public Componente(String nombre)
+    {
+        this.fabricante = "x";
+        this.modelo = nombre;
+        this.stock = 10;
+        this.precio = 100;
+    }
 
     public Componente(String fabricante, String modelo, int stock, float precio) {
         this.fabricante = fabricante;

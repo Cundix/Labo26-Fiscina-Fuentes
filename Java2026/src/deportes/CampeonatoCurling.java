@@ -58,7 +58,7 @@ public class CampeonatoCurling {
             for (int j = i + 1; j < equipos.size(); j++) {
                 Equipo e1 = equipos.get(i);
                 Equipo e2 = equipos.get(j);
-                String turno = obtenerTurnoComun(e1, e2);
+                Turno turno = obtenerTurnoComun(e1, e2);
 
                 if (turno != null) {
                     Fecha fechaPartido = new Fecha(contadorDia, 1, 2024);
@@ -71,17 +71,13 @@ public class CampeonatoCurling {
         }
     }
 
-    private String obtenerTurnoComun(Equipo e1, Equipo e2) {
-        String[] prioridades = {"mañana", "tarde", "noche"};
-        for (String p : prioridades) {
-            for (String t1 : e1.getTurnos()) {
-                if (t1.equalsIgnoreCase(p)) {
-                    for (String t2 : e2.getTurnos()) {
-                        if (t2.equalsIgnoreCase(p)) {
-                            return p;
-                        }
-                    }
-                }
+    private Turno obtenerTurnoComun(Equipo e1, Equipo e2) {
+
+        for (Turno turno : Turno.values())
+        {
+            if(e1.getTurnos().contains(turno) && e2.getTurnos().contains(turno) )
+            {
+                return turno;
             }
         }
         return null;

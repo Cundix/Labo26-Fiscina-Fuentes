@@ -6,10 +6,10 @@ public class Partido {
 
     private Equipo equipo1;
     private Equipo equipo2;
-    private String turno;
+    private Turno turno;
     private Fecha fechaPartido;
 
-    public Partido(Equipo equipo1, Equipo equipo2, String turno, Fecha fechaPartido) {
+    public Partido(Equipo equipo1, Equipo equipo2, Turno turno, Fecha fechaPartido) {
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
         this.turno = turno;
@@ -32,11 +32,11 @@ public class Partido {
         this.equipo2 = equipo2;
     }
 
-    public String getTurno() {
+    public Turno getTurno() {
         return turno;
     }
 
-    public void setTurno(String turno) {
+    public void setTurno(Turno turno) {
         this.turno = turno;
     }
 

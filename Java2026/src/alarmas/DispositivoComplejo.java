@@ -11,7 +11,9 @@ public class DispositivoComplejo extends Dispositivo{
 
         for(Dispositivo dispositivo : dispositivos)
         {
-
+            //Hacer esto
         }
+
+        return 0;
     }
 }

@@ -1,5 +1,6 @@
 package objetos;
 
+import escuela.Editorial;
 import fechas.Fecha;
 import personas.Persona;
 
@@ -8,10 +9,10 @@ public class Libro {
     private Persona autor;
     private int ISBN;
     private int cantPags;
-    private String editorial;
+    private Editorial editorial;
     private Fecha publicacion;
 
-    public Libro(String titulo, String editorial, Persona autor, int cantPags, int ISBN, Fecha publicacion)
+    public Libro(String titulo, Editorial editorial, Persona autor, int cantPags, int ISBN, Fecha publicacion)
     {
         this.titulo = titulo;
         this.editorial = editorial;
@@ -20,4 +21,5 @@ public class Libro {
         this.ISBN = ISBN;
         this.publicacion = publicacion;
     }
+
 }

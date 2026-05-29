@@ -15,8 +15,8 @@ public class mainCurling {
             e1.addJugador(j);
             if (i == 1) e1.setCapitan(j); // El primero es capitán
         }
-        e1.addTurno("mañana");
-        e1.addTurno("tarde");
+        e1.addTurno(Turno.MAÑANA);
+        e1.addTurno(Turno.TARDE);
 
         // Crear Equipo 2
         Equipo e2 = new Equipo("Javier Milei");
@@ -25,8 +25,8 @@ public class mainCurling {
             e2.addJugador(j);
             if (i == 1) e2.setCapitan(j);
         }
-        e2.addTurno("tarde");
-        e2.addTurno("noche");
+        e2.addTurno(Turno.TARDE);
+        e2.addTurno(Turno.NOCHE);
 
         // Crear Equipo 3
         Equipo e3 = new Equipo("La Patagonia");
@@ -35,8 +35,8 @@ public class mainCurling {
             e3.addJugador(j);
             if (i == 1) e3.setCapitan(j);
         }
-        e3.addTurno("mañana");
-        e3.addTurno("noche");
+        e3.addTurno(Turno.MAÑANA);
+        e3.addTurno(Turno.NOCHE);
 
         // Agregar equipos al torneo
         torneo.agregarEquipo(e1);

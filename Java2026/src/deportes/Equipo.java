@@ -7,7 +7,7 @@ public class Equipo {
 
     private String nombre;
     private ArrayList<Jugador> jugadores;
-    private ArrayList<String> turnos;
+    private ArrayList<Turno> turnos;
     private Jugador capitan;
 
     public Equipo(String nombre) {
@@ -28,12 +28,11 @@ public class Equipo {
         return jugadores;
     }
 
-    public ArrayList<String> getTurnos() {
+    public ArrayList<Turno> getTurnos() {
         return turnos;
     }
 
-    public void addTurno(String turno) {
-        this.turnos.add(turno.toLowerCase());
+    public void addTurno(Turno turno) {this.turnos.add(turno);
     }
 
     public void setCapitan(Jugador capitan) {
