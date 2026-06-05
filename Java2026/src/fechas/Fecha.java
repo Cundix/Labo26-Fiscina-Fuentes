@@ -72,6 +72,8 @@ public class Fecha {
         return dias[this.mes - 1];
     }
 
+
+
     public void fechaCorta()
     {
         System.out.println(this.dia + "-" + this.mes + "-" + this.anio);
@@ -153,6 +155,8 @@ public class Fecha {
         }
         return isItAfterier;
     }
+
+
 
     public static void main(String[] args) {
         Fecha fecha = new Fecha(30, 12, 2009);
