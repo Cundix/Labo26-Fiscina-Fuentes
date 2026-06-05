@@ -1,22 +1,32 @@
 package vehiculos;
 
 import fechas.Fecha;
+import colores.Color;
+import java.awt.*;
 
 public class Vehiculo {
     private String marca;
     private String modelo;
-    private String color;
+    private Color color;
     private int cantRuedas;
     private int yearFabricacion;
     private String tipo;
 
-    public Vehiculo(String marca, String modelo, String color, int cantRuedas, int yearFabricacion)
+    public Vehiculo(String marca, String modelo, Color color, int cantRuedas, int yearFabricacion)
     {
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
         this.cantRuedas = cantRuedas;
         this.yearFabricacion = yearFabricacion;
+    }
+
+    public Vehiculo(String marca, String modelo, Color color)
+    {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+
     }
 
     public Vehiculo()
@@ -45,12 +55,16 @@ public class Vehiculo {
         this.modelo = modelo;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public int getCantRuedas() {

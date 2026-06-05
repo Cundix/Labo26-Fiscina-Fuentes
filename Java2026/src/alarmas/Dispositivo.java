@@ -1,18 +1,19 @@
 package alarmas;
 
 import fechas.Fecha;
+import modificadores.Estado;
 
 public class Dispositivo {
-    private boolean estado;
+    private Estado estado;
     private int umbral;
     private Fecha fechaAdquisicion;
     private int medicion;
 
-    public boolean isEstado() {
+    public Estado isEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(Estado estado) {
         this.estado = estado;
     }
 
@@ -40,14 +41,14 @@ public class Dispositivo {
         this.medicion = medicion;
     }
 
-    public Dispositivo(boolean estado, int umbral, Fecha fechaAdquisicion) {
+    public Dispositivo(Estado estado, int umbral, Fecha fechaAdquisicion) {
         this.estado = estado;
         this.umbral = umbral;
         this.fechaAdquisicion = fechaAdquisicion;
     }
 
     public Dispositivo() {
-        this.estado = true;
+        this.estado = Estado.ACTIVADO;
         this.umbral = 1;
     }
 
