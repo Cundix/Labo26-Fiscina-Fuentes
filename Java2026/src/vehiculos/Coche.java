@@ -31,10 +31,9 @@ public class Coche extends Vehiculo {
 
     public static void main(String[] args) {
         Coche coche = new Coche();
-        System.out.println("Velocidad: " + coche.velocidad + " Marca: " + coche.marca + "Modelo: " + coche.modelo);
+        System.out.println("Velocidad: " + coche.velocidad + " Marca: " + coche.getMarca() + " Modelo: " + coche.getModelo());
         coche.XLR8();
-        System.out.println("Velocidad: " + coche.velocidad + " Marca: " + coche.marca + "Modelo: " + coche.modelo);
-
+        System.out.println("Velocidad: " + coche.velocidad + " Marca: " + coche.getMarca() + " Modelo: " + coche.getModelo());
     }
 
 }
