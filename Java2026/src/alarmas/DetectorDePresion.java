@@ -1,9 +1,10 @@
 package alarmas;
 
 import fechas.Fecha;
+import modificadores.Estado;
 
 public class DetectorDePresion extends Dispositivo {
-    public DetectorDePresion(boolean estado, int umbral, Fecha fechaAdquisicion) {
+    public DetectorDePresion(Estado estado, int umbral, Fecha fechaAdquisicion) {
         super(estado, umbral, fechaAdquisicion);
     }
 
