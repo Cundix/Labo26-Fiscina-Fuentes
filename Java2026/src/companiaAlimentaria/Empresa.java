@@ -14,22 +14,62 @@ public class Empresa {
         this.productos = new ArrayList<Producto>();
     }
 
-    public void agregarProducto(Producto producto) {
+    public void agregarProducto(Producto producto)
+    {
         this.productos.add(producto);
+
     }
 
-    public void mostrarInfoProducto(Producto producto) {
-        System.out.println("Nombre: " + producto.getNombre());
-        System.out.println("Precio: " + producto.getPrecio());
-        System.out.println("Numero de Lote: " + producto.numeroDeLote);
-        System.out.println("Codigo: " + producto.codigo);
+    public ArrayList<Producto> getProductos() {
+        return productos;
     }
 
-    public Producto productoMasRecientementeEnvasado() {
+    public void setProductos(ArrayList<Producto> productos) {
+        this.productos = productos;
+    }
+
+    public String productoMasRecientementeEnvasado() {
         Producto ultimo = this.productos.get(0);
         for (Producto producto : this.productos) {
             if (producto.getFechaEnvasado().mayorQue(ultimo.getFechaEnvasado())) ultimo = producto;
         }
-        return ultimo;
+        return ultimo.numeroDeLote;
+    }
+
+    public void productosPorPais() {
+        for(PaisOrigen paisOrigen : PaisOrigen.values())
+        {
+            int contadorPaisOrigen = 0;
+            for (Producto producto : this.productos) {
+                if(producto.getPaisOrigen() == paisOrigen)
+                {
+                    contadorPaisOrigen++;
+                }
+            }
+            System.out.println(paisOrigen + " - " + contadorPaisOrigen);
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        Empresa empresa = new Empresa();
+        ArrayList<Producto> productos = new ArrayList<>();
+
+        ProductoFresco producto = new ProductoFresco();
+        ProductoFresco producto1 = new ProductoFresco();
+
+        ProductoEnvasado producto2 = new ProductoEnvasado();
+        ProductoEnvasado producto3 = new ProductoEnvasado();
+
+        empresa.agregarProducto(producto);
+        empresa.getProductos().getFirst().mostrarInfoProducto();
+
+        empresa.agregarProducto(producto1);
+        empresa.agregarProducto(producto2);
+        empresa.agregarProducto(producto3);
+        
+        empresa.productosPorPais();
+
+
     }
 }

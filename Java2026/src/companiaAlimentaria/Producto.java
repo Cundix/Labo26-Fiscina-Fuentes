@@ -8,7 +8,30 @@ public class Producto {
     PaisOrigen paisOrigen;
     String codigo;
     String numeroDeLote;
+    TablaNutricional tablaNutricional;
     double precio;
+
+    public Producto(String nombre, Fecha fechaEnvasado, PaisOrigen paisOrigen, String codigo, String numeroDeLote, TablaNutricional tablaNutricional, double precio) {
+        this.nombre = nombre;
+        this.fechaEnvasado = fechaEnvasado;
+        this.paisOrigen = paisOrigen;
+        this.codigo = codigo;
+        this.numeroDeLote = numeroDeLote;
+        this.tablaNutricional = tablaNutricional;
+        this.precio = precio;
+    }
+
+    public Producto()
+    {
+        this.nombre = "";
+        this.fechaEnvasado = new Fecha();
+        this.paisOrigen = PaisOrigen.ARGENTINA;
+        this.codigo = "";
+        this.numeroDeLote = "";
+        this.tablaNutricional = new  TablaNutricional();
+        this.precio = 0;
+
+    }
 
     public String getNombre() {
         return nombre;
@@ -57,4 +80,31 @@ public class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    public TablaNutricional getTablaNutricional() {
+        return tablaNutricional;
+    }
+
+    public void setTablaNutricional(TablaNutricional tablaNutricional) {
+        this.tablaNutricional = tablaNutricional;
+    }
+
+    public TablaNutricional infoNutricional()
+    {
+        return this.tablaNutricional;
+    }
+
+    public void mostrarInfoProducto()
+    {
+        System.out.println("Nombre: " + this.getNombre());
+        System.out.println("Precio: " + this.getPrecio());
+        System.out.println("Numero de Lote: " + this.numeroDeLote);
+        System.out.println("Codigo: " + this.codigo);
+    }
+    
+    public String infoProducto()
+    {
+        return ("CODIGO: " + this.codigo + " | " + "NUMERO DE LOTE: " + this.numeroDeLote);
+    }
+
 }
