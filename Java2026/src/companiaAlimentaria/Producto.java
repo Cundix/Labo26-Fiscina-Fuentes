@@ -104,7 +104,7 @@ public class Producto {
 
     public String infoProducto()
     {
-        return ("CODIGO: " + this.codigo + " | " + "NUMERO DE LOTE: " + this.numeroDeLote);
+        return ("CÓDIGO: " + this.codigo + " | " + "NÚMERO DE LOTE: " + this.numeroDeLote);
     }
 
 }
