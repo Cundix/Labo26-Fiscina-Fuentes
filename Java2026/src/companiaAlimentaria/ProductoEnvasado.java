@@ -15,4 +15,8 @@ public class ProductoEnvasado extends Producto {
     public ProductoEnvasado(float temperaturaRecomendada) {
         this.temperaturaRecomendada = temperaturaRecomendada;
     }
+
+    public ProductoEnvasado() {
+
+    }
 }

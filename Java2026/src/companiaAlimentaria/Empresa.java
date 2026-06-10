@@ -32,7 +32,7 @@ public class Empresa {
         for (Producto producto : this.productos) {
             if (producto.getFechaEnvasado().mayorQue(ultimo.getFechaEnvasado())) ultimo = producto;
         }
-        return ultimo.numeroDeLote;
+        return ultimo.getNumeroDeLote();
     }
 
     public void productosPorPais() {
