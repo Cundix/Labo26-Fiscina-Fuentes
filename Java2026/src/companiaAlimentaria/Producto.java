@@ -3,12 +3,12 @@ package companiaAlimentaria;
 import fechas.Fecha;
 
 public class Producto {
-    String nombre;
-    Fecha fechaEnvasado;
-    PaisOrigen paisOrigen;
-    String codigo;
-    String numeroDeLote;
-    TablaNutricional tablaNutricional;
+    private String nombre;
+    private Fecha fechaEnvasado;
+    private PaisOrigen paisOrigen;
+    private String codigo;
+    private String numeroDeLote;
+    private TablaNutricional tablaNutricional;
     double precio;
 
     public Producto(String nombre, Fecha fechaEnvasado, PaisOrigen paisOrigen, String codigo, String numeroDeLote, TablaNutricional tablaNutricional, double precio) {
@@ -101,7 +101,7 @@ public class Producto {
         System.out.println("Numero de Lote: " + this.numeroDeLote);
         System.out.println("Codigo: " + this.codigo);
     }
-    
+
     public String infoProducto()
     {
         return ("CODIGO: " + this.codigo + " | " + "NUMERO DE LOTE: " + this.numeroDeLote);
