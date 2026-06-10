@@ -1,6 +1,5 @@
 package companiaAlimentaria;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Empresa {
@@ -67,7 +66,7 @@ public class Empresa {
         empresa.agregarProducto(producto1);
         empresa.agregarProducto(producto2);
         empresa.agregarProducto(producto3);
-        
+
         empresa.productosPorPais();
 
 
