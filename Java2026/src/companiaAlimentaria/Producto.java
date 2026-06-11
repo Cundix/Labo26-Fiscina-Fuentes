@@ -101,7 +101,7 @@ public class Producto {
         System.out.println("Numero de Lote: " + this.numeroDeLote);
         System.out.println("Codigo: " + this.codigo);
     }
-
+    
     public String infoProducto()
     {
         return ("CÓDIGO: " + this.codigo + " | " + "NÚMERO DE LOTE: " + this.numeroDeLote);

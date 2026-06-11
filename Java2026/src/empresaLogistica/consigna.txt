@@ -1,0 +1,28 @@
+Ejercicio 1: Sistema de Envíos y Logística (Similar al Ejercicio 4 - Llamadas)
+Conceptos a evaluar: Herencia, cálculo de costos dinámico, filtrado y ordenamiento (rankings).
+
+Una empresa de logística necesita un sistema para gestionar los envíos realizados por sus repartidores.
+
+Repartidores: Cada repartidor tiene Nombre, Apellido, legajo, zona de origen y vehículo asignado. DONE
+
+Envíos: Se registran entre un repartidor y un cliente. Al finalizar el envío, se debe ingresar la
+distancia recorrida en kilómetros y el peso del paquete en kg. El sistema determina automáticamente
+el tipo de envío según las zonas involucradas:
+
+Envío Local: Si la zona de origen y destino son la misma. Guarda el barrio de origen y
+barrio de destino. El costo se calcula como: precio_base + (distancia * 50).
+
+Envío Nacional: Si la zona de origen y destino son diferentes. Guarda la provincia de destino
+y el tipo de transporte (Aéreo o Terrestre). Si es aéreo, tiene un recargo del 20% sobre el costo final.
+El costo base se calcula como: precio_base + (peso * 120).
+
+Restricciones: Solo se pueden registrar envíos de repartidores activos en la empresa. El sistema debe
+conservar un registro histórico de todos los envíos (repartidor, cliente, fecha, distancia, costo).
+
+Se solicita desarrollar la lógica para:
+
+Registrar un envío determinando automáticamente su tipo y afectando el estado del repartidor.
+
+Obtener un listado de envíos realizados por un repartidor específico.
+
+Mostrar un ranking de los 3 repartidores que más kilómetros recorrieron en envíos nacionales.
