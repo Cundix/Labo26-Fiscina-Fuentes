@@ -17,6 +17,11 @@ public class Envio {
     private float precioBase;
     private Estado estado;
     private Repartidor repartidor;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
 
     public float getDistanciaEnKm() {
         return distanciaEnKm;
