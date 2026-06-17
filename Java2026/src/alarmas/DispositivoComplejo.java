@@ -2,7 +2,7 @@ package alarmas;
 
 import java.util.ArrayList;
 
-public class DispositivoComplejo extends Dispositivo{
+public abstract class DispositivoComplejo extends Dispositivo{
     private ArrayList<Dispositivo> dispositivos;
 
     public int calcularUmbral()

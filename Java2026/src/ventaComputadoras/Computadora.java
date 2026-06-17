@@ -14,8 +14,8 @@ public class Computadora {
     public Computadora(CPU cpu) {
         this.cpu = cpu;
         ArrayList<Componente> perifericos = new ArrayList<>();
-        perifericos.add(new DispositivoEntrada());
-        perifericos.add(new DispositivoSalida());
+        perifericos.add(new Teclado());
+        perifericos.add(new Pantalla());
         this.perifericos = perifericos;
     }
 

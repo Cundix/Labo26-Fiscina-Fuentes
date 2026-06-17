@@ -3,7 +3,7 @@ package objetos;
 import fechas.Fecha;
 import personas.Empleado;
 
-public class Llamada {
+public abstract class Llamada {
     private Empleado empleadoOrigen;
     private Empleado empleadoDestino;
     private int duracionMin;

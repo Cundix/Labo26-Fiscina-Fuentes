@@ -1,6 +1,6 @@
 package ventaElectronica;
 
-public class ProductoMultimedia extends Producto
+public abstract class ProductoMultimedia extends Producto
 {
     public ProductoMultimedia(String nombre, int precio)
     {

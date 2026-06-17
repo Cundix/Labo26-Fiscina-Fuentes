@@ -2,7 +2,7 @@ package personas;
 
 import fechas.Fecha;
 
-public class Persona {
+public abstract class Persona {
     private int dni;
     private String nombre;
     private String apellido;

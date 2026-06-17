@@ -12,6 +12,11 @@ public class ProductoEnvasado extends Producto {
         this.temperaturaRecomendada = temperaturaRecomendada;
     }
 
+    public ProductoEnvasado(String lote)
+    {
+        super(lote);
+    }
+
     public ProductoEnvasado(float temperaturaRecomendada) {
         this.temperaturaRecomendada = temperaturaRecomendada;
     }

@@ -1,6 +1,6 @@
 package ventaElectronica;
 
-public class ProductoCargador extends Producto
+public abstract class ProductoCargador extends Producto
 {
     private int cantidadCargas;
 

@@ -1,6 +1,6 @@
 package ventaComputadoras;
 
-public class DispositivoSalida extends Componente {
+public abstract class DispositivoSalida extends Componente {
     private int cantPuertosValidos;
 
     public DispositivoSalida() {

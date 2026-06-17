@@ -1,6 +1,6 @@
 package ventaComputadoras;
 
-public class DispositivoEntrada extends Componente{ //Segun el profe, deberia extender de periferico, igual con disp salida
+public abstract class DispositivoEntrada extends Componente{ //Segun el profe, deberia extender de periferico, igual con disp salida
     private String tipoDeConector;
     private int cantPuertosValidos;
 

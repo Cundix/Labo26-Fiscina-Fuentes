@@ -3,7 +3,7 @@ package alarmas;
 import fechas.Fecha;
 import modificadores.Estado;
 
-public class Dispositivo {
+public abstract class Dispositivo {
     private Estado estado;
     private int umbral;
     private Fecha fechaAdquisicion;

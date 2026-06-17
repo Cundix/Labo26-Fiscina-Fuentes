@@ -113,10 +113,10 @@ public class TiendaVentaElectronica {
         Television tv3 = new Television("Tedge Cocina", 85000, Resolucion.SIETEVEINTE);
         tv3.setStock(1);
 
-        EquipoSonido audio1 = new EquipoSonido(true, "Parlante JBL Flip 6", 95000);
+        EquipoSonido audio1 = new Auriculares(true, "Parlante JBL Flip 6", 95000);
         audio1.setStock(22);
 
-        EquipoSonido audio2 = new EquipoSonido(false, "Home Theater Sony Antiguo", 180000);
+        EquipoSonido audio2 = new Auriculares(false, "Home Theater Sony Antiguo", 180000);
 
 
         Cargador cargadorFast = new Cargador("Cargador Anker PowerPort 20W", 25000, 500);

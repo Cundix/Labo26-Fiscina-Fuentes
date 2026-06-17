@@ -1,7 +1,6 @@
 import deportes.*;
 import personas.Jugador;
 import fechas.Fecha;
-import java.util.ArrayList;
 
 public class mainCurling {
     public static void main(String[] args) {
@@ -56,5 +55,8 @@ public class mainCurling {
                     p.getEquipo2().getNombre() +
                     " | Turno: " + p.getTurno());
         }
+    }
+
+    public enum Gasti {
     }
 }

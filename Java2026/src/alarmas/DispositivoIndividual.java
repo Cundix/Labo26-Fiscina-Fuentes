@@ -1,5 +1,6 @@
 package alarmas;
 
-public class DispositivoIndividual extends Dispositivo{
+public abstract class DispositivoIndividual extends Dispositivo
+{
 
 }

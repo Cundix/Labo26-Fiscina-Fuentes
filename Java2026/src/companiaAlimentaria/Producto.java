@@ -21,6 +21,11 @@ public class Producto {
         this.precio = precio;
     }
 
+    public Producto(String lote)
+    {
+        this.numeroDeLote = lote;
+    }
+
     public Producto()
     {
         this.nombre = "";
@@ -107,4 +112,8 @@ public class Producto {
         return ("CÓDIGO: " + this.codigo + " | " + "NÚMERO DE LOTE: " + this.numeroDeLote);
     }
 
+    public boolean esFresco()
+    {
+        return false;
+    }
 }

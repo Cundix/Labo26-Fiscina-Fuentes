@@ -1,6 +1,9 @@
 package geografia;
 
+import personas.Empleado;
 import personas.Persona;
+import personas.Profesor;
+import personas.Tecnico;
 
 import java.util.ArrayList;
 
@@ -46,9 +49,9 @@ public class EjercicioArray {
         }
 
         ArrayList<Persona> listaPersona = new ArrayList<>();
-        listaPersona.add(new Persona());
-        listaPersona.add(new Persona());
-        listaPersona.add(new Persona());
+        listaPersona.add(new Empleado());
+        listaPersona.add(new Empleado());
+        listaPersona.add(new Empleado());
 
         for (Persona p : listaPersona)
             {
