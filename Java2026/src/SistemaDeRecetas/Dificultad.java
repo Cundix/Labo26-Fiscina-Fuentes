@@ -1,4 +1,4 @@
-package platoplatito_u6ej2;
+package SistemaDeRecetas;
 
 public enum Dificultad
 {
