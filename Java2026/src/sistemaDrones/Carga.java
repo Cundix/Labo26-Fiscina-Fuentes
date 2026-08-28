@@ -3,6 +3,19 @@ package sistemaDrones;
 public class Carga extends Dron {
     private float pesoCargaKGs;
 
+    public Carga(String nombre, float bateriaPorcentaje, EstadoDron estado, Cords origen, float pesoCargaKGs) {
+        super(nombre, bateriaPorcentaje, estado, origen);
+        this.pesoCargaKGs = pesoCargaKGs;
+    }
+
+    public float getPesoCargaKGs() {
+        return pesoCargaKGs;
+    }
+
+    public void setPesoCargaKGs(float pesoCargaKGs) {
+        this.pesoCargaKGs = pesoCargaKGs;
+    }
+
     @Override
     public boolean ejecutarMision() {
         return false;

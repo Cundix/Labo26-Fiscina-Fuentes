@@ -29,12 +29,36 @@ public abstract class Mascota {
         this.alegria = alegria;
     }
 
-    public abstract void saludar(String persona);
+    public void saludar(String saludo)
+    {
+        if(this.getAlegria() >= 1)
+        {
+            for(int i = 0; i < this.getAlegria(); i++)
+            {
+                System.out.println(saludo);
+            }
+            if(!(getAlegria() > 1))
+            {
+                this.restarAlegria();
+            }
+        }
+    };
 
-    public abstract void alimentar();
+    public abstract void saludo (String persona, String saludo);
 
-    public abstract String conocerEspecie();
+    public void alimentar()
+    {
+        this.sumarAlegria();
+    };
 
+    public void sumarAlegria()
+    {
+        this.alegria++;
+    };
 
+    public void restarAlegria()
+    {
+        this.alegria--;
+    };
 
 }

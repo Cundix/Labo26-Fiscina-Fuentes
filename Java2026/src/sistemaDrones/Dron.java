@@ -1,11 +1,21 @@
 package sistemaDrones;
 
 public abstract class Dron {
+    private static int contador;
+    private int id;
     private String nombre;
     private float bateriaPorcentaje;
-    private int id;
     private EstadoDron estado;
     private Cords origen;
+
+    public Dron(String nombre, float bateriaPorcentaje, EstadoDron estado, Cords origen) {
+        this.id = contador;
+        this.nombre = nombre;
+        this.bateriaPorcentaje = bateriaPorcentaje;
+        this.estado = estado;
+        this.origen = origen;
+        contador++;
+    }
 
     public String getNombre() {
         return nombre;

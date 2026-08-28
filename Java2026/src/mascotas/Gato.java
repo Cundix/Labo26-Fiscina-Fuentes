@@ -4,8 +4,15 @@ import personas.Persona;
 
 public class Gato extends Mascota{
 
+
+
     @Override
-    public void saludar(String persona) {
+    public void saludar(String persona)
+    {
+        for(int i; i < getAlegria(); i ++)
+        {
+
+        }
 
     }
 
@@ -15,9 +22,8 @@ public class Gato extends Mascota{
     }
 
     @Override
-    public String conocerEspecie() {
-        return "";
+    public String toString()
+    {
+        return "Gato";
     }
-
-
 }

@@ -2,6 +2,7 @@ package mascotas;
 
 public class Perro extends Mascota {
 
+
     @Override
     public void saludar(String persona) {
         if(persona == this.getNombreOwner()) {
@@ -20,13 +21,26 @@ public class Perro extends Mascota {
 
     }
 
+
     @Override
-    public void alimentar() {
-        this.alegria++;
+    public void saludar(String persona, String saludo)
+    {
+        if(persona.equals(this.getNombreOwner()))
+        {
+        }
+
+
     }
 
     @Override
-    public String conocerEspecie() {
-        return this.getClass().getSimpleName();
+    public void alimentar()
+    {
+        this.alegria ++;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Gato";
     }
 }

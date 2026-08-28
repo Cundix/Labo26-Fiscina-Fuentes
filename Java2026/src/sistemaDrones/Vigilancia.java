@@ -5,6 +5,12 @@ public class Vigilancia extends Dron
     private int cantMB;
     private int mbUsados;
 
+    public Vigilancia(String nombre, float bateriaPorcentaje, EstadoDron estado, Cords origen, int cantMB, int mbUsados) {
+        super(nombre, bateriaPorcentaje, estado, origen);
+        this.cantMB = cantMB;
+        this.mbUsados = mbUsados;
+    }
+
     public int getCantMB() {
         return cantMB;
     }
