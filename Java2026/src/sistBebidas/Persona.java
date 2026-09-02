@@ -69,7 +69,7 @@ public class Persona
 
     public Persona mayorQque(Persona persona)
     {
-        if(persona.calcularQPersona() > this.calcularQPersona())
+        if(persona == null || persona.calcularQPersona() > this.calcularQPersona())
         {
             return persona;
         }
@@ -78,7 +78,7 @@ public class Persona
 
     public Persona menorQque(Persona persona)
     {
-        if(persona.calcularQPersona() < this.calcularQPersona())
+        if(persona == null || persona.calcularQPersona() < this.calcularQPersona())
         {
             return persona;
         }
