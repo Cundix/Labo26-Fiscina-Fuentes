@@ -29,6 +29,12 @@ public abstract class Persona {
         this.provincia = provincia;
     }
 
+    public Persona(String nombre, String apellido, Fecha fechaNacimiento) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
     public Persona(String pais, String provincia)
     {
         this.pais = pais;

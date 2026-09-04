@@ -100,7 +100,7 @@ public class Persona
         int cant = 0;
         Medicion medicion;
 
-        for(LocalDate fecha : mediciones.keySet())
+        for(LocalDate fecha : mediciones.keySet()) //es mas recomendable usar un Entryset para evitar un Doble Recorrido
         {
             if(fecha.getYear() == anio)
             {
@@ -141,14 +141,11 @@ public class Persona
         }
     }
 
-    public LocalDate menorPeso()
-    {
+    public LocalDate menorPeso() {
         double peso = 9999999;
         LocalDate fechaRet = null;
-        for(LocalDate fecha : mediciones.keySet())
-        {
-            if(peso > mediciones.get(fecha).getPesoKg())
-            {
+        for (LocalDate fecha : mediciones.keySet()) {
+            if (peso > mediciones.get(fecha).getPesoKg()) {
                 peso = mediciones.get(fecha).getPesoKg();
                 fechaRet = fecha;
             }

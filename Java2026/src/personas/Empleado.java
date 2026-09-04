@@ -7,6 +7,7 @@ public class Empleado extends Persona {
     private String numeroTelefono;
     private int codigoPais;
 
+
     public Empleado(String numeroTelefono, String pais, String provincia)
     {
         super(pais, provincia);
