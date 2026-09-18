@@ -1,4 +1,4 @@
-package SistemaDeRecetas;
+package sistemaDeRecetas;
 
 public enum TipoEntrada
 {

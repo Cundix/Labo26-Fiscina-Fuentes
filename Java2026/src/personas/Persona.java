@@ -2,17 +2,20 @@ package personas;
 
 import fechas.Fecha;
 
+import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
+
 public abstract class Persona {
     private int dni;
     private String nombre;
     private String apellido;
     private int edad;
-    private Fecha fechaNacimiento;
+    private LocalDate fechaNacimiento;
     private String direccion;
     private String pais;
     private String provincia;
 
-    public Persona(String nombre, String apellido, int edad, Fecha fechaNacimiento, String direccion) {
+    public Persona(String nombre, String apellido, int edad, LocalDate fechaNacimiento, String direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -29,7 +32,7 @@ public abstract class Persona {
         this.provincia = provincia;
     }
 
-    public Persona(String nombre, String apellido, Fecha fechaNacimiento) {
+    public Persona(String nombre, String apellido, LocalDate fechaNacimiento) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNacimiento = fechaNacimiento;
@@ -89,7 +92,7 @@ public abstract class Persona {
         this.nombre = "Josh";
         this.apellido = "Josh";
         this.edad = 30;
-        this.fechaNacimiento = new Fecha();
+        this.fechaNacimiento = LocalDate.now();
         this.direccion = "Beiro 920, Vte. Lopez";
     }
 
@@ -113,11 +116,11 @@ public abstract class Persona {
         this.edad = edad;
     }
 
-    public Fecha getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Fecha fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 

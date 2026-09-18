@@ -1,4 +1,4 @@
-package SistemaDeRecetas;
+package sistemaDeRecetas;
 
 import java.util.ArrayList;
 
