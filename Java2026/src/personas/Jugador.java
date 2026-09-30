@@ -2,6 +2,8 @@ package personas;
 
 import fechas.Fecha;
 
+import java.time.LocalDate;
+
 public class Jugador extends Persona
 {
 
@@ -11,7 +13,7 @@ public class Jugador extends Persona
         super();
         this.numeroCamiseta = numeroCamiseta;
     }
-    public Jugador(String nombre, String apellido, int edad, Fecha fechaNacimiento, String direccion, int numeroCamiseta) {
+    public Jugador(String nombre, String apellido, int edad, LocalDate fechaNacimiento, String direccion, int numeroCamiseta) {
         super(nombre, apellido, edad, fechaNacimiento, direccion);
         this.numeroCamiseta = numeroCamiseta;
     }

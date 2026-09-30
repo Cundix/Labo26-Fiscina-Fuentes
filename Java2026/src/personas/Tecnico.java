@@ -4,12 +4,14 @@ import fechas.Fecha;
 
 import objetos.Cohete;
 
+import java.time.LocalDate;
+
 public class Tecnico extends Persona {
 
     private String especialidad;
     private Cohete coheteAsignado;
 
-    public Tecnico(String nombre, String apellido, int edad, Fecha fechaNacimiento, String direccion, String especialidad, Cohete cohete)
+    public Tecnico(String nombre, String apellido, int edad, LocalDate fechaNacimiento, String direccion, String especialidad, Cohete cohete)
     {
         super(nombre, apellido, edad, fechaNacimiento, direccion);
         this.especialidad = especialidad;

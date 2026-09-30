@@ -19,6 +19,32 @@ public class PuntoRecoleccion
         this.tiposRecibidos = tiposRecibidos;
     }
 
+    public PuntoRecoleccion(String direccion, String barrio, double latitudOrigen, double longitudOrigen) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        this.direccion = direccion;
+        this.barrio = barrio;
+        this.latitudOrigen = latitudOrigen;
+        this.longitudOrigen = longitudOrigen;
+    }
+
     public String getDireccion() {
         return direccion;
     }

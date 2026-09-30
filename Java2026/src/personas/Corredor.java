@@ -3,6 +3,8 @@ package personas;
 import escuela.Materias;
 import fechas.Fecha;
 
+import java.time.LocalDate;
+
 public class Corredor extends Persona
 {
 
@@ -31,14 +33,49 @@ public class Corredor extends Persona
             this.carrerasTotales = 10;
 
         }
-        public Corredor(String nombre, String apellido, int edad, Fecha fechaNacimiento, String direccion, int maxVel, int carrerasGanadas, int carrerasTotales)
-        {
-            super(nombre, apellido, edad, fechaNacimiento, direccion);
-            this.maxVel = maxVel;
-            this.carrerasGanadas = carrerasGanadas;
-            this.carrerasTotales = carrerasTotales;
-        }
-        public Corredor whoIsFaster(Corredor Corredor2)
+
+    public Corredor(String nombre, String apellido, int edad, LocalDate fechaNacimiento, String direccion, int maxVel, int carrerasGanadas, int carrerasTotales) {
+        super(nombre, apellido, edad, fechaNacimiento, direccion);
+        this.maxVel = maxVel;
+        this.carrerasGanadas = carrerasGanadas;
+        this.carrerasTotales = carrerasTotales;
+    }
+
+    public Corredor(String nombre, String apellido, int dni, String pais, String provincia, int maxVel, int carrerasGanadas, int carrerasTotales) {
+        super(nombre, apellido, dni, pais, provincia);
+        this.maxVel = maxVel;
+        this.carrerasGanadas = carrerasGanadas;
+        this.carrerasTotales = carrerasTotales;
+    }
+
+    public Corredor(String nombre, String apellido, LocalDate fechaNacimiento, int maxVel, int carrerasGanadas, int carrerasTotales) {
+        super(nombre, apellido, fechaNacimiento);
+        this.maxVel = maxVel;
+        this.carrerasGanadas = carrerasGanadas;
+        this.carrerasTotales = carrerasTotales;
+    }
+
+    public Corredor(String pais, String provincia, int maxVel, int carrerasGanadas, int carrerasTotales) {
+        super(pais, provincia);
+        this.maxVel = maxVel;
+        this.carrerasGanadas = carrerasGanadas;
+        this.carrerasTotales = carrerasTotales;
+    }
+
+    public Corredor(String nombre, String apellido, int edad, int maxVel, int carrerasGanadas, int carrerasTotales) {
+        super(nombre, apellido, edad);
+        this.maxVel = maxVel;
+        this.carrerasGanadas = carrerasGanadas;
+        this.carrerasTotales = carrerasTotales;
+    }
+
+    public Corredor(int maxVel, int carrerasGanadas, int carrerasTotales) {
+        this.maxVel = maxVel;
+        this.carrerasGanadas = carrerasGanadas;
+        this.carrerasTotales = carrerasTotales;
+    }
+
+    public Corredor whoIsFaster(Corredor Corredor2)
         {
             if(this.maxVel < Corredor2.getMaxVel()) {return Corredor2;}
             else return this;

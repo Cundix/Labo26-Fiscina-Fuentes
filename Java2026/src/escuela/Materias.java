@@ -55,7 +55,7 @@ public class Materias
         for (Alumno alumno : alumnosInscriptos)
         {
             sumaEdadAlumnos += Period.between(
-                    LocalDate.of(alumno.getFechaNacimiento().getAnio(), alumno.getFechaNacimiento().getMes(), alumno.getFechaNacimiento().getDia()),
+                    LocalDate.of(alumno.getFechaNacimiento().getYear(), alumno.getFechaNacimiento().getMonthValue(), alumno.getFechaNacimiento().getDayOfMonth()),
                     LocalDate.now()
             ).getYears();
         }

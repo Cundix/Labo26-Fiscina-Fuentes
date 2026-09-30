@@ -3,13 +3,20 @@ package alarmas;
 import fechas.Fecha;
 import modificadores.Estado;
 
-public class DetectorDeHumo extends Dispositivo{
-    public DetectorDeHumo(Estado estado, int umbral, Fecha fechaAdquisicion) {
+public class DetectorDeHumo extends Dispositivo {
+    private double medidaActual;
+
+    public DetectorDeHumo(Estado estado, double umbral, Fecha fechaAdquisicion) {
         super(estado, umbral, fechaAdquisicion);
     }
 
-    public DetectorDeHumo() {
-        super();
+    public void setMedidaActual(double medidaActual) {
+        this.medidaActual = medidaActual;
+    }
+
+    @Override
+    public double proporcionarMedida() {
+        return this.medidaActual;
     }
 
     @Override

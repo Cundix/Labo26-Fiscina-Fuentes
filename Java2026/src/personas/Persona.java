@@ -1,9 +1,6 @@
 package personas;
 
-import fechas.Fecha;
-
 import java.time.LocalDate;
-import java.time.chrono.ChronoLocalDate;
 
 public abstract class Persona {
     private int dni;

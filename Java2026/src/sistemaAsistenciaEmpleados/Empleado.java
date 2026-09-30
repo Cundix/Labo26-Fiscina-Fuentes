@@ -16,7 +16,7 @@ public class Empleado extends Persona
     private HashSet<LocalDateTime> ingresos;
 
 
-    public Empleado(String nombre, String apellido, Fecha fechaNacimiento, String numeroTelefono, HashSet<LocalDateTime> ingresos) {
+    public Empleado(String nombre, String apellido, LocalDate fechaNacimiento, String numeroTelefono, HashSet<LocalDateTime> ingresos) {
         super(nombre, apellido, fechaNacimiento);
         this.numeroTelefono = numeroTelefono;
         this.ingresos = ingresos;

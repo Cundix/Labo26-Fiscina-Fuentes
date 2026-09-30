@@ -3,10 +3,13 @@ package sistemaAsistenciaEmpleados;
 import fechas.Fecha;
 
 import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+
+import static java.time.LocalDate.of;
 
 public class Empresa
 {
@@ -99,7 +102,7 @@ public class Empresa
         ingresosCarlos.add(LocalDateTime.of(2026, 9, 4, 8, 05)); // Viernes
 
         // 4. Crear Empleado y setear sus días asignados
-        Fecha fechaNac = new Fecha(15, 5, 1995); // Ajustar según los atributos de tu clase Persona/Fecha
+        LocalDate fechaNac = LocalDate.of(1995, 5, 5); // Ajustar según los atributos de tu clase Persona/Fecha
         Empleado emp1 = new Empleado("Carlos", "Gómez", fechaNac, "1122334455", ingresosCarlos);
         emp1.setDiasAsignados(diasLaborales);
 

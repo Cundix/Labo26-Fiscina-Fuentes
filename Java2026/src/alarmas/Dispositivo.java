@@ -5,11 +5,21 @@ import modificadores.Estado;
 
 public abstract class Dispositivo {
     private Estado estado;
-    private int umbral;
+    private double umbral;
     private Fecha fechaAdquisicion;
-    private int medicion;
 
-    public Estado isEstado() {
+    public Dispositivo(Estado estado, double umbral, Fecha fechaAdquisicion) {
+        this.estado = estado;
+        this.umbral = umbral;
+        this.fechaAdquisicion = fechaAdquisicion;
+    }
+
+    public Dispositivo() {
+        this.estado = Estado.ACTIVADO;
+        this.umbral = 1.0;
+    }
+
+    public Estado getEstado() {
         return estado;
     }
 
@@ -17,11 +27,11 @@ public abstract class Dispositivo {
         this.estado = estado;
     }
 
-    public int getUmbral() {
+    public double getUmbral() {
         return umbral;
     }
 
-    public void setUmbral(int umbral) {
+    public void setUmbral(double umbral) {
         this.umbral = umbral;
     }
 
@@ -33,41 +43,18 @@ public abstract class Dispositivo {
         this.fechaAdquisicion = fechaAdquisicion;
     }
 
-    public int getMedicion() {
-        return medicion;
-    }
+    // Proporciona la medida del dispositivo (se sobrescribe en SensorComplejo)
+    public abstract double proporcionarMedida();
 
-    public void setMedicion(int medicion) {
-        this.medicion = medicion;
-    }
+    // Mensaje específico del disparo de alarma
+    public abstract void mensaje();
 
-    public Dispositivo(Estado estado, int umbral, Fecha fechaAdquisicion) {
-        this.estado = estado;
-        this.umbral = umbral;
-        this.fechaAdquisicion = fechaAdquisicion;
-    }
-
-    public Dispositivo() {
-        this.estado = Estado.ACTIVADO;
-        this.umbral = 1;
-    }
-
-    public void mensaje()
-    {
-        System.out.println("Dispositivo ACTIVADO!");
-    }
-
-    public boolean alarma()
-    {
-        if(this.getMedicion() > this.getUmbral())
-        {
-            this.mensaje();
+    // Evalúa si dispara la alarma
+    public boolean evaluarAlarma() {
+        if (this.estado == Estado.ACTIVADO && proporcionarMedida() > getUmbral()) {
+            mensaje();
             return true;
         }
-
-        else
-        {
-            return false;
-        }
+        return false;
     }
 }
