@@ -6,6 +6,7 @@ public class Tienda {
     private ArrayList<Compra> comprasVendidas = new ArrayList<>();
     private ArrayList<Componente> inventario = new ArrayList<>();
 
+
     public void registrarCompra(Cliente cliente, Computadora computadora, MetodoDePago pago) {
         if (!computadora.esValida()) {
             System.out.println("Computadora no valida!");

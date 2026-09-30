@@ -3,7 +3,7 @@ package ventaComputadoras;
 public class Tarjeta extends MetodoDePago {
     private String numeroTarjeta;
     private String banco;
-    private String tipo;
+    private String tipo; // "CRÉDITO" o "DÉBITO"
 
     public Tarjeta(String numeroTarjeta, String banco, String tipo) {
         super(5);

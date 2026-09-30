@@ -1,12 +1,11 @@
 package alarmas;
 
-import fechas.Fecha;
-import modificadores.Estado;
+import java.time.LocalDate;
 
 public class DetectorDePresion extends Dispositivo {
     private double medidaActual;
 
-    public DetectorDePresion(Estado estado, double umbral, Fecha fechaAdquisicion) {
+    public DetectorDePresion(Estado estado, double umbral, LocalDate fechaAdquisicion) {
         super(estado, umbral, fechaAdquisicion);
     }
 

@@ -1,14 +1,13 @@
 package alarmas;
 
-import fechas.Fecha;
-import modificadores.Estado;
+import java.time.LocalDate;
 
 public abstract class Dispositivo {
     private Estado estado;
     private double umbral;
-    private Fecha fechaAdquisicion;
+    private LocalDate fechaAdquisicion;
 
-    public Dispositivo(Estado estado, double umbral, Fecha fechaAdquisicion) {
+    public Dispositivo(Estado estado, double umbral, LocalDate fechaAdquisicion) {
         this.estado = estado;
         this.umbral = umbral;
         this.fechaAdquisicion = fechaAdquisicion;
@@ -17,6 +16,7 @@ public abstract class Dispositivo {
     public Dispositivo() {
         this.estado = Estado.ACTIVADO;
         this.umbral = 1.0;
+        this.fechaAdquisicion = LocalDate.now();
     }
 
     public Estado getEstado() {
@@ -35,26 +35,34 @@ public abstract class Dispositivo {
         this.umbral = umbral;
     }
 
-    public Fecha getFechaAdquisicion() {
+    public LocalDate getFechaAdquisicion() {
         return fechaAdquisicion;
     }
 
-    public void setFechaAdquisicion(Fecha fechaAdquisicion) {
+    public void setFechaAdquisicion(LocalDate fechaAdquisicion) {
         this.fechaAdquisicion = fechaAdquisicion;
     }
 
-    // Proporciona la medida del dispositivo (se sobrescribe en SensorComplejo)
+    // Devuelve el valor numérico (medida) registrado por el dispositivo
     public abstract double proporcionarMedida();
 
-    // Mensaje específico del disparo de alarma
+    // Emite el mensaje particular correspondiente al tipo de alarma
     public abstract void mensaje();
 
-    // Evalúa si dispara la alarma
+    // Evalúa la medición actual contra el umbral si el sensor está activado
     public boolean evaluarAlarma() {
         if (this.estado == Estado.ACTIVADO && proporcionarMedida() > getUmbral()) {
             mensaje();
             return true;
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Tipo: " + getClass().getSimpleName() +
+                " | Estado: " + estado +
+                " | Umbral: " + umbral +
+                " | Fecha de Adquisición: " + fechaAdquisicion;
     }
 }

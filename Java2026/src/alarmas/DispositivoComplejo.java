@@ -1,13 +1,12 @@
 package alarmas;
 
-import fechas.Fecha;
-import modificadores.Estado;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class DispositivoComplejo extends Dispositivo {
     private ArrayList<Dispositivo> dispositivos;
 
-    public DispositivoComplejo(Estado estado, double umbral, Fecha fechaAdquisicion) {
+    public DispositivoComplejo(Estado estado, double umbral, LocalDate fechaAdquisicion) {
         super(estado, umbral, fechaAdquisicion);
         this.dispositivos = new ArrayList<>();
     }

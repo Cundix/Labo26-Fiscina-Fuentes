@@ -1,12 +1,11 @@
 package alarmas;
 
-import fechas.Fecha;
-import modificadores.Estado;
+import java.time.LocalDate;
 
 public class DetectorDeHumo extends Dispositivo {
     private double medidaActual;
 
-    public DetectorDeHumo(Estado estado, double umbral, Fecha fechaAdquisicion) {
+    public DetectorDeHumo(Estado estado, double umbral, LocalDate fechaAdquisicion) {
         super(estado, umbral, fechaAdquisicion);
     }
 

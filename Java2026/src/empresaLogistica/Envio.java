@@ -7,7 +7,7 @@ distancia recorrida en kilómetros y el peso del paquete en kg. El sistema deter
 el tipo de envío según las zonas involucradas:
 */
 
-import modificadores.Estado;
+import alarmas.Estado;
 
 public class Envio {
     private float distanciaEnKm;
