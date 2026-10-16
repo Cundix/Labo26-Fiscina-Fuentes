@@ -1,9 +1,16 @@
 package equipoFutbol;
 
-public class Entrenador implements Integrante {
+public class Entrenador extends CuerpoTecnico {
     private int cantCopasObetenidas;
     private Lisencia lisencia;
     private int aniosExperiencia;
+
+    public Entrenador()
+    {
+        super();
+        this.lisencia = new Lisencia();
+        this.aniosExperiencia = 10;
+    }
 
     public int getCantCopasObetenidas() {
         return cantCopasObetenidas;

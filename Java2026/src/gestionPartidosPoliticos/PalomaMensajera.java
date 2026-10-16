@@ -1,6 +1,6 @@
 package gestionPartidosPoliticos;
 
-import java.sql.SQLOutput;
+import java.time.LocalTime;
 
 public class PalomaMensajera implements Comunicador {
     private boolean aprendioMapa;
@@ -13,12 +13,15 @@ public class PalomaMensajera implements Comunicador {
         this.aprendioMapa = aprendioMapa;
     }
 
+
     @Override
-    public void enviarMensaje()
+    public void enviarMensaje() throws ProblemaComunicacion
     {
         if(this.isAprendioMapa())
         {
             System.out.println("Lema paloma");
         }
+
+        else throw new ProblemaComunicacion("La paloma no aprendió el mapa todavía");
     }
 }

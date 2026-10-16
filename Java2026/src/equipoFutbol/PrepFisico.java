@@ -4,6 +4,13 @@ public class PrepFisico extends CuerpoTecnico{
     private String especialidad;
     private boolean matriculaHabilidante;
 
+    public PrepFisico()
+    {
+        super();
+        this.especialidad = "Tren Inferior";
+        this.matriculaHabilidante = true;
+    }
+
     public String getEspecialidad() {
         return especialidad;
     }
@@ -23,6 +30,6 @@ public class PrepFisico extends CuerpoTecnico{
     @Override
     public boolean contratable() {
         if(this.isMatriculaHabilidante()) return true;
-        else System.out.println("El preparador físico " + this.getNombre() + " no tiene matrícula habilitante");
+        else System.out.println("El preparador físico " + this.getNombre() + " no tiene matrícula habilitante"); return false;
     }
 }

@@ -92,10 +92,11 @@ public class Trabajador extends Persona implements Comunicador {
 
     // hacer una  exeption
     @Override
-    public void enviarMensaje(LocalTime hora) {
-        if(hora.isAfter(horarioEntrada) && hora.isBefore(horarioSalida))
+    public void enviarMensaje() throws ProblemaComunicacion{
+        if(LocalTime.now().isAfter(horarioEntrada) && LocalTime.now().isBefore(horarioSalida))
         {
             System.out.println("Yo " + this.getNombre() + " te invito a que...");
         }
+        else throw new ProblemaComunicacion("El trabajador no está en horario laboral");
     }
 }

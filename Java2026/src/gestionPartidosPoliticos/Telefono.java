@@ -3,10 +3,12 @@ package gestionPartidosPoliticos;
 public class Telefono implements Comunicador {
     private CompTelefonicas compTelefonica;
     private String nroCelular;
+    private float saldoRestante;
 
     @Override
-    public void enviarMensaje()  // si se deberían hacer chequeos pero son si el celu tiene batería o si tiene senial, y claramente no mandaría el msg si no tiene aunque el programa le diga q lo haga igual JAJAJAJAJA
+    public void enviarMensaje()
     {
-        System.out.println("Conectando a la antena mas cercana");
+        if(this.saldoRestante > 0) System.out.println("Conectando a la antena mas cercana");
+        else throw new ProblemaComunicacion("El telefono no tiene saldo");
     }
 }
