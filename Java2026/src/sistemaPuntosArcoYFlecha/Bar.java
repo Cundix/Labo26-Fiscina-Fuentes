@@ -7,10 +7,10 @@ public class Bar {
     private int cantidadClientes;
     private double recaudacion;
     private HashSet<Beneficio> beneficios;
-    private HashSet<Beneficio> acumulables;
+    private HashSet<Acumulable> acumulables;
 
 
-    public Bar(HashSet<Diana> dianasBar, int cantidadClientes, double recaudacion, HashSet<Beneficio> beneficios, HashSet<Beneficio> acumulables) {
+    public Bar(HashSet<Diana> dianasBar, int cantidadClientes, double recaudacion, HashSet<Beneficio> beneficios, HashSet<Acumulable> acumulables) {
         this.dianasBar = dianasBar;
         this.cantidadClientes = cantidadClientes;
         this.recaudacion = recaudacion;
@@ -50,22 +50,26 @@ public class Bar {
         this.beneficios = beneficios;
     }
 
-    public HashSet<Beneficio> getAcumulables() {
+    public HashSet<Acumulable> getAcumulables() {
         return acumulables;
     }
 
-    public void setAcumulables(HashSet<Beneficio> acumulables) {
+    public void setAcumulables(HashSet<Acumulable> acumulables) {
         this.acumulables = acumulables;
     }
 
-    public void cantidadBeneTragos() {
+    public int cantidadBeneTragos() {
         int cantidad = 0;
 
         for (Beneficio beneficio : beneficios) {
-            if (!(beneficio instanceof Acumulable)) {
+
+            if(!acumulables.contains(beneficio)){}
+            {
                 cantidad++;
             }
         }
+
+        return cantidad;
 
     }
 
