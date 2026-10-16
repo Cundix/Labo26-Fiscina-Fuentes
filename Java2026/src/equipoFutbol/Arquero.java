@@ -1,9 +1,15 @@
 package equipoFutbol;
 
-public class Arquero extends Jugador implements Integrante{
+public class Arquero extends Jugador{
     private float porcentajeAtajadas;
     private int cantGolesRecibidos;
 
+    public Arquero()
+    {
+        super();
+        this.porcentajeAtajadas = 1;
+        this.cantGolesRecibidos = 1000;
+    }
 
     public float getPorcentajeAtajadas() {
         return porcentajeAtajadas;

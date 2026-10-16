@@ -6,6 +6,12 @@ public class Lisencia {
     private String nroLisencia;
     private LocalDate fechaVencimiento;
 
+    public Lisencia()
+    {
+        this.nroLisencia = "L34598";
+        this.fechaVencimiento = LocalDate.of(2030, 4, 3);
+    }
+
     public String getNroLisencia() {
         return nroLisencia;
     }

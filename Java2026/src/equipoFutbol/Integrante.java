@@ -2,7 +2,22 @@ package equipoFutbol;
 
 import personas.Persona;
 
-public interface Integrante {
+import java.util.HashSet;
+import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
-    public boolean contratable();
+public abstract class Integrante extends Persona {
+
+    private HashSet<Club> historialClubes;
+
+    public Integrante() {
+        this.historialClubes = new HashSet<Club>();
+    }
+
+    public boolean trabajoEnClub(Club club)
+    {
+        if (this.historialClubes.contains(club)) return true;
+        else return false;
+    }
+
+    public abstract boolean contratable();
 }

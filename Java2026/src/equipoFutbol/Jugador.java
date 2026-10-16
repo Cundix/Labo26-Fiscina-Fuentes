@@ -4,10 +4,15 @@ import personas.Persona;
 
 import java.util.HashSet;
 
-public abstract class Jugador extends Persona implements Integrante{
+public abstract class Jugador extends Integrante{
     private String provinciaOrigen;
     private String numeroCamiseta;
-    private HashSet<Club> historialClubes;
 
+    public Jugador()
+    {
+        super();
+        this.provinciaOrigen = "NA";
+        this.numeroCamiseta = "11";
+    }
 
 }

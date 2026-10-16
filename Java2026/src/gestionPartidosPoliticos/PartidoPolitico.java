@@ -53,19 +53,19 @@ public class PartidoPolitico {
 
     public void hacerCampania()
     {
-        for(Comunicador comunicador : comunicadorPartidarios)
-        {
-            if(comunicador instanceof Telefono || comunicador instanceof Trabajador)
-            {
-                comunicador.enviarMensaje();
-                System.out.printf("Vote por el partido " + this.getNombre() + " para un mejor futuro");
-            }
-            else
-            {
-                System.out.printf("Vote por el partido " + this.getNombre() + " para un mejor futuro");
-                comunicador.enviarMensaje();
-            }
+        try {
+            for (Comunicador comunicador : comunicadorPartidarios) {
+                if (comunicador instanceof Telefono || comunicador instanceof Trabajador) {
+                    comunicador.enviarMensaje();
+                    System.out.printf("Vote por el partido " + this.getNombre() + " para un mejor futuro");
+                } else {
+                    System.out.printf("Vote por el partido " + this.getNombre() + " para un mejor futuro");
+                    comunicador.enviarMensaje();
+                }
 
+            }
+        } catch (ProblemaComunicacion p) {
+            System.out.println(p.getMessage());
         }
     }
 

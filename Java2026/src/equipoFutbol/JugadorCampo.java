@@ -1,6 +1,6 @@
 package equipoFutbol;
 
-public class JugadorCampo extends Jugador implements Integrante{
+public class JugadorCampo extends Jugador{
     private float porcentajeConversiones;
     private int cantAsistencias;
 
@@ -21,9 +21,16 @@ public class JugadorCampo extends Jugador implements Integrante{
         this.cantAsistencias = cantAsistencias;
     }
 
+    public JugadorCampo()
+    {
+        super();
+        this.porcentajeConversiones = 60;
+        this.cantAsistencias = 100;
+    }
+
     @Override
     public boolean contratable() {
         if(this.getPorcentajeConversiones() > 30 && this.getCantAsistencias() >= 10) return true;
-        else System.out.println("El porcentaje de conversiones del jugador es menor a ");
+        else return false;
     }
 }
