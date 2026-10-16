@@ -7,7 +7,11 @@ public class Club {
 
     public void contratar(Integrante posibleEmpleado) throws NoContratable
     {
-        if(posibleEmpleado.contratable() && !(posibleEmpleado.trabajoEnClub(this))) this.integrantes.add(posibleEmpleado);
+        if(posibleEmpleado.contratable() && !(posibleEmpleado.trabajoEnClub(this)))
+        {
+            this.integrantes.add(posibleEmpleado);
+            System.out.println(posibleEmpleado.getNombre() + "ha sido contrata");
+        }
         else throw new NoContratable("La persona no se puede contratar");
     }
 
