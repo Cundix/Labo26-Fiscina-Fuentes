@@ -2,12 +2,12 @@ package sistemaPuntosArcoYFlecha;
 
 import java.util.HashSet;
 
-public class BeneficioTragos
+public class BeneficioTragos extends Beneficio
 {
     private HashSet<String> tragos;
 
-    public BeneficioTragos(HashSet<String> tragos)
-    {
+    public BeneficioTragos(String nombre, String usuarioCreador, HashSet<String> tragos) {
+        super(nombre, usuarioCreador);
         this.tragos = tragos;
     }
 

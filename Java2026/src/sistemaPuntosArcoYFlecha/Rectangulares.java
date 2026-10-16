@@ -36,4 +36,8 @@ public class Rectangulares extends Diana
     }
 
 
+    @Override
+    public float calcularArea() {
+        return (float) (base*altura);
+    }
 }

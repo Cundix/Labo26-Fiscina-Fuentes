@@ -45,4 +45,9 @@ public abstract class Diana
     }
 
     public abstract float calcularArea();
+
+    public int cantidadPuntajes()
+    {
+        return  puntajesDiana.size();
+    }
 }

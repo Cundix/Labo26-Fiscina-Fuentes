@@ -14,6 +14,11 @@ public class Circulares extends Diana
         super(nombre, dificultad);
     }
 
+    @Override
+    public float calcularArea() {
+        return (float)3.14 * radioCm * radioCm;
+    }
+
     public static float getRadioCm() {
         return radioCm;
     }
@@ -21,6 +26,8 @@ public class Circulares extends Diana
     public static void setRadioCm(float radioCm) {
         Circulares.radioCm = radioCm;
     }
+
+
 
 
 }

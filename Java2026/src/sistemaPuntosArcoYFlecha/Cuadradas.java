@@ -25,4 +25,8 @@ public class Cuadradas extends Diana
     }
 
 
+    @Override
+    public float calcularArea() {
+        return lado*lado;
+    }
 }
