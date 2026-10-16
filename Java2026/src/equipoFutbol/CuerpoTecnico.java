@@ -4,8 +4,10 @@ import personas.Persona;
 
 import java.util.HashSet;
 
-public class CuerpoTecnico extends Persona {
+public abstract class CuerpoTecnico extends Persona implements Integrante{
     private String titulo;
     private float aniosExperiencia;
-    private HashSet
+    private HashSet<String> clubesAnteriores;
+
+
 }

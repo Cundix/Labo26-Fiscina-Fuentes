@@ -1,10 +1,11 @@
 package gestionPartidosPoliticos;
 
+import personas.Persona;
+
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-public class Trabajador implements Comunicador {
+public class Trabajador extends Persona implements Comunicador {
     private LocalTime horarioEntrada;
     private LocalTime horarioSalida;
     private String nombre;
@@ -87,6 +88,9 @@ public class Trabajador implements Comunicador {
         this.cuil = cuil;
     }
 
+
+
+    // hacer una  exeption
     @Override
     public void enviarMensaje(LocalTime hora) {
         if(hora.isAfter(horarioEntrada) && hora.isBefore(horarioSalida))
