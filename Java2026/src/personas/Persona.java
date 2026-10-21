@@ -3,14 +3,14 @@ package personas;
 import java.time.LocalDate;
 
 public abstract class Persona {
-    private int dni;
-    private String nombre;
-    private String apellido;
-    private int edad;
-    private LocalDate fechaNacimiento;
-    private String direccion;
-    private String pais;
-    private String provincia;
+    protected int dni;
+    protected String nombre;
+    protected String apellido;
+    protected int edad;
+    protected LocalDate fechaNacimiento;
+    protected String direccion;
+    protected String pais;
+    protected String provincia;
 
     public Persona(String nombre, String apellido, int edad, LocalDate fechaNacimiento, String direccion) {
         this.nombre = nombre;
@@ -127,5 +127,10 @@ public abstract class Persona {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public boolean nacioEnAnioPar()
+    {
+        return(this.fechaNacimiento.getYear() %2 == 0);
     }
 }
