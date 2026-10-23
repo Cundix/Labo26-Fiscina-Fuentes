@@ -15,7 +15,7 @@ public class Nino extends Paciente implements Tratable{
     public boolean chequearTratabilidad() {
         if (this.edad > 3)
         {
-            System.out.println("Tu tratamiento tardará: " + this.nivelTolerancia*2 + " dias.")
+            System.out.println("Tu tratamiento tardará: " + this.nivelTolerancia*2 + " dias.");
             return true;
         }
         else System.out.println("El nino es muy chico para ser tratado");
@@ -34,6 +34,11 @@ public class Nino extends Paciente implements Tratable{
 
     @Override
     public boolean puedeComenzar() {
+        if(this.chequearTratabilidad() && !(this.yaEsObjetivo()))
+        {
+            System.out.println("el costo total será de: " + this.calcularCosto() + "ARS");
+            return true;
+        }
         return false;
     }
 }

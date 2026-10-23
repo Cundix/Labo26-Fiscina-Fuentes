@@ -38,11 +38,12 @@ public class Joven extends Paciente implements Tratable{
 
     @Override
     public boolean puedeComenzar() {
-        if(this.chequearTratabilidad())
+        if(this.chequearTratabilidad() && !(this.yaEsObjetivo()))
         {
             System.out.println("el costo total será de: " + this.calcularCosto() + "ARS");
             return true;
         }
+        return false;
     }
 
 
