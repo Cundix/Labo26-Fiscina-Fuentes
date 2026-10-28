@@ -12,7 +12,15 @@ public class Jugador
     private int riesgoActual;
     static int RIESGOMAX = 100;
 
-    private Prueba pruebaFav
+    private Prueba pruebaFav;
+
+    public Prueba getPruebaFav() {
+        return pruebaFav;
+    }
+
+    public void setPruebaFav(Prueba pruebaFav) {
+        this.pruebaFav = pruebaFav;
+    }
 
     public String getNombre() {
         return nombre;
@@ -103,6 +111,28 @@ public class Jugador
             return true;
         }
     }
+
+    public boolean nuevaPruebaFav(Prueba pruebaFav)
+    {
+        try
+        {
+            if(this.pruebaFav != pruebaFav)
+            {
+                setPruebaFav(pruebaFav);
+                return true;
+            }
+            else
+            {
+                throw new PruebaRepetida("Prueba ya esta como favorita");
+            }
+        }
+        catch (PruebaRepetida pre)
+        {
+            return false;
+        }
+    }
+
+
 
 
 

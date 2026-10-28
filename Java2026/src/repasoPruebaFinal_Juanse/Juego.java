@@ -39,4 +39,20 @@ public class Juego
     public void setJugables(HashSet<Jugable> jugables) {
         this.jugables = jugables;
     }
+
+    public void nuevaPrueba(String nombrePrueba, Dificultad dificultad, String recompensa, Escenario escenario, int consumoEnergia, int riesgo, int tiempoReactivacion)
+    {
+        if(Dificultad.MORTAL.equals(dificultad))
+        {
+            pruebas.add(new Mortal(nombrePrueba, recompensa, escenario, consumoEnergia, tiempoReactivacion));
+        }
+        else if(riesgo >= 30)
+        {
+            pruebas.add(new Avanzada(nombrePrueba, dificultad, recompensa, escenario, riesgo)
+        }
+        else
+        {
+            pruebas.add(new Basica(nombrePrueba, dificultad, recompensa, escenario, riesgo))
+        }
+    }
 }
