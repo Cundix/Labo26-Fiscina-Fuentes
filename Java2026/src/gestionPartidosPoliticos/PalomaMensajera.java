@@ -5,6 +5,13 @@ import java.time.LocalTime;
 public class PalomaMensajera implements Comunicador {
     private boolean aprendioMapa;
 
+    public PalomaMensajera(boolean aprendioMapa) {
+        this.aprendioMapa = aprendioMapa;
+    }
+
+    public PalomaMensajera() {
+    }
+
     public boolean isAprendioMapa() {
         return aprendioMapa;
     }
