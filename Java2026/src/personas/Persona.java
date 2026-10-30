@@ -43,6 +43,17 @@ public abstract class Persona {
         apellido = "x";
     }
 
+    public Persona(int dni, String nombre, String apellido, int edad, LocalDate fechaNacimiento, String direccion, String pais, String provincia) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.fechaNacimiento = fechaNacimiento;
+        this.direccion = direccion;
+        this.pais = pais;
+        this.provincia = provincia;
+    }
+
     public String getProvincia() {
         return provincia;
     }

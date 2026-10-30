@@ -6,6 +6,7 @@ public interface Reservable {
     public void descripcionDeReserva();
     public float calcularPrecio(int ca);
     public void chequearTurnos(int cantAReservar) throws NoHaySuficientesTurnosException;
+    public void tomarTurnos(int cantAReservar);
 
 
 }

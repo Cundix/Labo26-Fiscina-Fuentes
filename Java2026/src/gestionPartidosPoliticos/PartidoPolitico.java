@@ -8,6 +8,13 @@ public class PartidoPolitico {
     private int cantidadMiembros;
     private ArrayList<Comunicador> comunicadorPartidarios;
 
+    public PartidoPolitico(String nombre, String direccionSede, int cantidadMiembros, ArrayList<Comunicador> comunicadorPartidarios) {
+        this.nombre = nombre;
+        this.direccionSede = direccionSede;
+        this.cantidadMiembros = cantidadMiembros;
+        this.comunicadorPartidarios = comunicadorPartidarios;
+    }
+
     public String getNombre() {
         return nombre;
     }

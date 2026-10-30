@@ -16,6 +16,22 @@ public class Trabajador extends Persona implements Comunicador {
     private String residencia;
     private String cuil;
 
+    public Trabajador(int dni, String nombre, String apellido, int edad, LocalDate fechaNacimiento, String direccion, String pais, String provincia, LocalTime horarioEntrada, LocalTime horarioSalida, String nombre2, String apellido2, String DNI, LocalDate fechaNacimiento2, float sueldo, String residencia, String cuil) {
+        super(dni, nombre, apellido, edad, fechaNacimiento, direccion, pais, provincia);
+        this.horarioEntrada = horarioEntrada;
+        this.horarioSalida = horarioSalida;
+        this.nombre = nombre2;
+        this.apellido = apellido2;
+        this.DNI = DNI;
+        this.fechaNacimiento = fechaNacimiento2;
+        this.sueldo = sueldo;
+        this.residencia = residencia;
+        this.cuil = cuil;
+    }
+
+    public Trabajador() {
+    }
+
     public LocalTime getHorarioEntrada() {
         return horarioEntrada;
     }
